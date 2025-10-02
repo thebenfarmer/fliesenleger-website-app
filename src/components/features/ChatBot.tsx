@@ -49,25 +49,6 @@ export default function ChatBot() {
     scrollToBottom();
   }, [messages]);
 
-  const getBotResponse = (userMessage: string): string => {
-    const lowerMessage = userMessage.toLowerCase();
-
-    if (lowerMessage.includes('preis') || lowerMessage.includes('kosten') || lowerMessage.includes('badezimmer')) {
-      return botResponses.preise;
-    }
-    if (lowerMessage.includes('termin') || lowerMessage.includes('beratung') || lowerMessage.includes('besuch')) {
-      return botResponses.termin;
-    }
-    if (lowerMessage.includes('material') || lowerMessage.includes('fliese') || lowerMessage.includes('naturstein')) {
-      return botResponses.material;
-    }
-    if (lowerMessage.includes('referenz') || lowerMessage.includes('projekt') || lowerMessage.includes('beispiel')) {
-      return botResponses.referenzen;
-    }
-
-    return botResponses.default;
-  };
-
   const handleSendMessage = async (content: string) => {
     if (!content.trim()) return;
 
@@ -82,18 +63,47 @@ export default function ChatBot() {
     setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI thinking time
-    setTimeout(() => {
+    try {
+      // Call API route to get AI response
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage].map(msg => ({
+            sender: msg.sender,
+            content: msg.content,
+          })),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('API request failed');
+      }
+
+      const data = await response.json();
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: getBotResponse(content),
+        content: data.message,
         sender: 'bot',
         timestamp: new Date(),
       };
 
       setMessages((prev) => [...prev, botMessage]);
+    } catch (error) {
+      console.error('Chat error:', error);
+      // Fallback message on error
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        content: 'Entschuldigung, es gab ein technisches Problem. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt unter 089 / 123 456.',
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
       setIsTyping(false);
-    }, 1000 + Math.random() * 1000);
+    }
   };
 
   const handleQuickAction = (action: string) => {

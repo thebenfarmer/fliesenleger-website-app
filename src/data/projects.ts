@@ -24,8 +24,8 @@ export const projects: Project[] = [
     duration: '3 Tage',
     location: 'München-Schwabing',
     year: 2024,
-    before: '/images/projects/bad-modern-01-before.jpg',
-    after: '/images/projects/bad-modern-01-after.jpg',
+    before: '/images/projects/bad-modern-01-before.png',
+    after: '/images/projects/bad-modern-01-after.png',
     description: 'Komplette Badsanierung mit edlen Großformatfliesen in Betonoptik. Bodengleiche Dusche und hochwertige Wandverkleidung für ein zeitloses Design.',
     highlights: [
       'Großformatfliesen 120x60cm',
