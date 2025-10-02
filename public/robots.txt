@@ -1,0 +1,15 @@
+# Fliesenleger München - Robots.txt
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fliesenleger-muenchen.de/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin/private areas (wenn vorhanden)
+# Disallow: /admin/
+# Disallow: /private/

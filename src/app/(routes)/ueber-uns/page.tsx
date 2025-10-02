@@ -1,0 +1,268 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Award, Users, Target, Shield, Heart, TrendingUp } from 'lucide-react';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import StickyContactBar from '@/components/layout/StickyContactBar';
+import { Card } from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
+
+export const metadata: Metadata = {
+  title: 'Über uns',
+  description:
+    'Fliesenleger-Meisterbetrieb in München seit 1998. Erfahren Sie mehr über unser Team, unsere Philosophie und warum Kunden uns vertrauen.',
+};
+
+const values = [
+  {
+    icon: Award,
+    title: 'Meisterqualität',
+    description:
+      'Als Meisterbetrieb garantieren wir höchste handwerkliche Qualität nach neuesten Standards.',
+  },
+  {
+    icon: Users,
+    title: 'Erfahrenes Team',
+    description:
+      'Unser Team besteht aus qualifizierten Fachkräften mit langjähriger Erfahrung.',
+  },
+  {
+    icon: Target,
+    title: 'Präzision',
+    description:
+      'Millimetergenaue Arbeit und saubere Ausführung sind unser Qualitätsanspruch.',
+  },
+  {
+    icon: Shield,
+    title: '5 Jahre Garantie',
+    description:
+      'Wir stehen zu unserer Arbeit und bieten Ihnen 5 Jahre Garantie auf alle Leistungen.',
+  },
+  {
+    icon: Heart,
+    title: 'Kundenzufriedenheit',
+    description:
+      'Die Zufriedenheit unserer Kunden steht im Mittelpunkt – über 500 zufriedene Kunden.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Weiterbildung',
+    description:
+      'Wir bilden uns kontinuierlich fort, um Ihnen die neuesten Techniken zu bieten.',
+  },
+];
+
+const timeline = [
+  {
+    year: '1998',
+    title: 'Gründung',
+    description:
+      'Gründung des Meisterbetriebs in München mit Fokus auf hochwertige Fliesenverlegung.',
+  },
+  {
+    year: '2005',
+    title: 'Expansion',
+    description:
+      'Erweiterung des Teams und Spezialisierung auf Naturstein und Mosaik.',
+  },
+  {
+    year: '2012',
+    title: 'Modernisierung',
+    description:
+      'Investition in moderne Werkzeuge und Techniken für Großformatfliesen.',
+  },
+  {
+    year: '2020',
+    title: '500+ Projekte',
+    description:
+      'Über 500 erfolgreich abgeschlossene Projekte in München und Umgebung.',
+  },
+  {
+    year: '2024',
+    title: 'Heute',
+    description:
+      'Führender Fliesenleger-Meisterbetrieb in München mit 25+ Jahren Erfahrung.',
+  },
+];
+
+export default function UeberUnsPage() {
+  return (
+    <>
+      <Header />
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="bg-primary py-16 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl">
+              <h1 className="mb-4 text-4xl font-bold md:text-5xl">
+                Über uns
+              </h1>
+              <p className="text-lg text-primary-100">
+                Seit 1998 steht unser Meisterbetrieb für höchste Qualität in der
+                Fliesenverlegung. Mit über 25 Jahren Erfahrung und einem Team von
+                qualifizierten Fachkräften setzen wir Ihre Projekte präzise und
+                zuverlässig um.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Story Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div>
+                <h2 className="mb-6 text-3xl font-bold">
+                  Unsere Geschichte
+                </h2>
+                <div className="prose prose-lg">
+                  <p className="text-muted-foreground">
+                    Was 1998 als kleiner Handwerksbetrieb begann, ist heute einer
+                    der führenden Fliesenleger-Meisterbetriebe in München. Mit
+                    Leidenschaft für das Handwerk und dem Anspruch an höchste
+                    Qualität haben wir uns über die Jahre einen exzellenten Ruf
+                    erarbeitet.
+                  </p>
+                  <p className="text-muted-foreground mt-4">
+                    Unser Erfolgsrezept ist einfach: Ehrliche Beratung, präzise
+                    Ausführung und faire Preise. Jedes Projekt behandeln wir mit
+                    der gleichen Sorgfalt, ob kleines Gäste-WC oder großzügiges
+                    Badezimmer. Die Zufriedenheit unserer Kunden ist unser größter
+                    Antrieb.
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-lg bg-muted p-8">
+                <div className="space-y-6">
+                  {timeline.map((item) => (
+                    <div key={item.year} className="flex gap-6">
+                      <div className="flex-shrink-0">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white font-bold">
+                          {item.year.slice(-2)}
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="mb-1 font-semibold">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-bold">
+                Unsere Werte
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Diese Werte leiten uns bei jedem Projekt und machen uns zu einem
+                zuverlässigen Partner für Ihre Fliesenarbeiten.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {values.map((value) => (
+                <Card
+                  key={value.title}
+                  variant="outlined"
+                  padding="lg"
+                  className="text-center transition-all hover:shadow-lg hover:border-primary"
+                >
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                    <value.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-semibold">{value.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {value.description}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-bold">
+                Unser Team
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Ein eingespieltes Team von Fachleuten mit unterschiedlichen
+                Spezialgebieten steht bereit, um Ihr Projekt perfekt umzusetzen.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3">
+              <Card variant="outlined" padding="lg" className="text-center">
+                <div className="mb-4 text-4xl">👨‍🔧</div>
+                <h3 className="mb-2 text-xl font-semibold">Meister & Geschäftsführer</h3>
+                <p className="mb-3 text-sm text-primary">Seit 1998</p>
+                <p className="text-sm text-muted-foreground">
+                  Leitung und Qualitätskontrolle aller Projekte
+                </p>
+              </Card>
+
+              <Card variant="outlined" padding="lg" className="text-center">
+                <div className="mb-4 text-4xl">👷‍♂️</div>
+                <h3 className="mb-2 text-xl font-semibold">Gesellen-Team</h3>
+                <p className="mb-3 text-sm text-primary">5 Fachkräfte</p>
+                <p className="text-sm text-muted-foreground">
+                  Spezialisiert auf verschiedene Materialien und Techniken
+                </p>
+              </Card>
+
+              <Card variant="outlined" padding="lg" className="text-center">
+                <div className="mb-4 text-4xl">📋</div>
+                <h3 className="mb-2 text-xl font-semibold">Projektkoordination</h3>
+                <p className="mb-3 text-sm text-primary">Büro-Team</p>
+                <p className="text-sm text-muted-foreground">
+                  Beratung, Planung und Koordination Ihres Projekts
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="mb-4 text-3xl font-bold">
+                Lernen Sie uns kennen
+              </h2>
+              <p className="mb-8 text-lg text-muted-foreground">
+                Vereinbaren Sie einen Termin für eine kostenlose Beratung. Wir
+                nehmen uns Zeit für Sie und Ihr Projekt.
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                <Link href="/kontakt">
+                  <Button variant="primary" size="lg">
+                    Kontakt aufnehmen
+                  </Button>
+                </Link>
+                <Link href="/referenzen">
+                  <Button variant="outline" size="lg">
+                    Referenzen ansehen
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+      <StickyContactBar />
+    </>
+  );
+}
