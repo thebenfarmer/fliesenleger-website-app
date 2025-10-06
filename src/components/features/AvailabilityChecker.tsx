@@ -30,8 +30,7 @@ const generateAvailableDates = (): AvailableDate[] => {
     const dayOfWeek = date.getDay();
     if (dayOfWeek === 0 || dayOfWeek === 6) continue;
 
-    // Zufällig 2-4 verfügbare Slots pro Tag
-    const numSlots = Math.floor(Math.random() * 3) + 2;
+    // Verfügbare Slots pro Tag
     const allSlots = ['09:00', '10:30', '13:00', '14:30', '16:00'];
     const slots: TimeSlot[] = allSlots.map(time => ({
       time,

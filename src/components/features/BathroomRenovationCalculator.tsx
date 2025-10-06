@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Bath, ArrowRight, ArrowLeft, CheckCircle2, Clock, Euro, Droplets, Thermometer, Wrench, Sparkles, ChevronRight, Layers } from 'lucide-react';
+import { Bath, ArrowRight, ArrowLeft, CheckCircle2, Clock, Euro, Droplets, Wrench, Sparkles, Layers } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
@@ -75,7 +75,7 @@ export default function BathroomRenovationCalculator() {
 
   const totalSteps = 6;
 
-  const updateStepData = (key: keyof StepData, value: any) => {
+  const updateStepData = (key: keyof StepData, value: StepData[keyof StepData]) => {
     setStepData((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -117,7 +117,7 @@ export default function BathroomRenovationCalculator() {
 
     let totalCost = 0;
     let totalDays = 0;
-    const breakdown: any = {};
+    const breakdown: Record<string, number> = {};
 
     // Floor tiles
     if (stepData.floorTiles) {
@@ -234,7 +234,7 @@ export default function BathroomRenovationCalculator() {
               {Object.entries(bathroomSizes).map(([key, value]) => (
                 <button
                   key={key}
-                  onClick={() => updateStepData('bathroomSize', key)}
+                  onClick={() => updateStepData('bathroomSize', key as 'small' | 'medium' | 'large')}
                   className={cn(
                     'group rounded-xl border-2 p-6 text-center transition-all hover:border-primary hover:shadow-lg',
                     stepData.bathroomSize === key
