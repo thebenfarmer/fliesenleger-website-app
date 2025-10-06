@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, Clock, CheckCircle2, ArrowRight, User, Mail, Phone, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/Card';
@@ -44,10 +44,16 @@ const generateAvailableDates = (): AvailableDate[] => {
 };
 
 export default function AvailabilityChecker() {
-  const [availableDates] = useState<AvailableDate[]>(generateAvailableDates());
+  const [availableDates, setAvailableDates] = useState<AvailableDate[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [step, setStep] = useState<'calendar' | 'form' | 'success'>('calendar');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setAvailableDates(generateAvailableDates());
+    setMounted(true);
+  }, []);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -98,6 +104,10 @@ export default function AvailabilityChecker() {
       year: 'numeric',
     }).format(date);
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <section className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">

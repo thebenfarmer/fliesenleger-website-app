@@ -289,27 +289,27 @@ export default function CostCalculator() {
                       <CardContent>
                         <div className="space-y-4">
                           <div>
-                            <p className="text-sm font-medium text-primary-100">Geschätzte Gesamtkosten</p>
+                            <p className="text-sm font-medium text-white/90">Geschätzte Gesamtkosten</p>
                             <motion.p
                               key={`${totalCostMin}-${totalCostMax}`}
                               initial={{ scale: 0.8, opacity: 0 }}
                               animate={{ scale: 1, opacity: 1 }}
                               transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                              className="mt-2 text-4xl font-bold md:text-5xl"
+                              className="mt-2 text-4xl font-bold text-white md:text-5xl"
                             >
                               {totalCostMin.toLocaleString('de-DE', { maximumFractionDigits: 0 })}€ -{' '}
                               {totalCostMax.toLocaleString('de-DE', { maximumFractionDigits: 0 })}€
                             </motion.p>
                           </div>
-                          <div className="flex items-center space-x-4 border-t border-primary-500 pt-4">
+                          <div className="flex items-center space-x-4 border-t border-white/30 pt-4">
                             <div>
-                              <p className="text-xs text-primary-100">Gesamtfläche</p>
-                              <p className="text-xl font-semibold">{totalArea.toFixed(1)} m²</p>
+                              <p className="text-xs text-white/80">Gesamtfläche</p>
+                              <p className="text-xl font-semibold text-white">{totalArea.toFixed(1)} m²</p>
                             </div>
-                            <div className="h-8 w-px bg-primary-500" />
+                            <div className="h-8 w-px bg-white/30" />
                             <div>
-                              <p className="text-xs text-primary-100">Material</p>
-                              <p className="text-xl font-semibold">{selectedMaterial.name}</p>
+                              <p className="text-xs text-white/80">Material</p>
+                              <p className="text-xl font-semibold text-white">{selectedMaterial.name}</p>
                             </div>
                           </div>
                         </div>
