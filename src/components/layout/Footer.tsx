@@ -36,7 +36,7 @@ export default function Footer() {
                 <span className="text-2xl font-bold text-white">F</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold">Fliesenleger München</h3>
+                <h3 className="text-lg font-bold text-primary">Fliesenleger München</h3>
                 <p className="text-sm text-gray-400">Meisterbetrieb seit 1998</p>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="mb-4 text-base font-semibold">Leistungen</h4>
+            <h4 className="mb-4 text-base font-semibold text-primary">Leistungen</h4>
             <ul className="space-y-2">
               {services.map((item) => (
                 <li key={item.name}>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="mb-4 text-base font-semibold">Unternehmen</h4>
+            <h4 className="mb-4 text-base font-semibold text-primary">Unternehmen</h4>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="mb-4 text-base font-semibold">Kontakt</h4>
+            <h4 className="mb-4 text-base font-semibold text-primary">Kontakt</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
