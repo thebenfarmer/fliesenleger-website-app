@@ -295,7 +295,7 @@ export default function CostCalculator() {
                               initial={{ scale: 0.8, opacity: 0 }}
                               animate={{ scale: 1, opacity: 1 }}
                               transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                              className="mt-2 text-4xl font-bold text-white md:text-5xl"
+                              className="mt-2 text-2xl font-bold text-white md:text-3xl"
                             >
                               {totalCostMin.toLocaleString('de-DE', { maximumFractionDigits: 0 })}€ -{' '}
                               {totalCostMax.toLocaleString('de-DE', { maximumFractionDigits: 0 })}€

@@ -535,15 +535,17 @@ export default function BathroomRenovationCalculator() {
                 <CardContent>
                   <div className="grid gap-6 md:grid-cols-2">
                     <div>
-                      <p className="mb-2 text-sm font-medium text-primary-100">Geschätzte Gesamtkosten</p>
-                      <motion.p
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                        className="text-5xl font-bold text-white md:text-6xl"
-                      >
-                        {total.toLocaleString('de-DE')}€
-                      </motion.p>
+                      <div>
+                        <p className="mb-2 text-sm font-medium text-white/90">Geschätzte Gesamtkosten</p>
+                        <motion.p
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+                          className="text-xl font-bold text-white md:text-2xl"
+                        >
+                          {total.toLocaleString('de-DE')}€
+                        </motion.p>
+                      </div>
                     </div>
                     <div className="flex items-center space-x-4">
                       <div className="flex-1">
