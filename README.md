@@ -2,19 +2,21 @@
 
 Eine moderne, performante Website für einen Fliesenleger-Meisterbetrieb in München, gebaut mit Next.js 15, TypeScript und Tailwind CSS.
 
-## 🚀 Features
+> **Hinweis**: Diese Website dient ausschließlich zu Demonstrationszwecken und ist ein Template-Projekt. Sie ist nicht für den produktiven Einsatz ohne entsprechende Anpassungen vorgesehen.
 
-- ✅ **Next.js 15** mit App Router
-- ✅ **TypeScript** für Type-Safety
-- ✅ **Tailwind CSS 4** mit Custom Design System
-- ✅ **Framer Motion** für flüssige Animationen
-- ✅ **WCAG 2.1 AA** konform (Accessibility)
-- ✅ **SEO-optimiert** mit Schema.org Structured Data
-- ✅ **Performance-First** (Core Web Vitals optimiert)
-- ✅ **Responsive Design** (Mobile-First)
-- ✅ **Vercel Analytics** & Speed Insights integriert
+## Features
 
-## 📋 Technologie-Stack
+- **Next.js 15** mit App Router
+- **TypeScript** für Type-Safety
+- **Tailwind CSS 4** mit Custom Design System
+- **Framer Motion** für flüssige Animationen
+- **WCAG 2.1 AA** konform (Accessibility)
+- **SEO-optimiert** mit Schema.org Structured Data
+- **Performance-First** (Core Web Vitals optimiert)
+- **Responsive Design** (Mobile-First)
+- **Vercel Analytics** & Speed Insights integriert
+
+## Technologie-Stack
 
 - **Framework**: Next.js 15.5.4
 - **Language**: TypeScript 5+
@@ -24,7 +26,7 @@ Eine moderne, performante Website für einen Fliesenleger-Meisterbetrieb in Mün
 - **Icons**: Lucide React
 - **Deployment**: Vercel
 
-## 🎨 Design System
+## Design System
 
 ### Farben
 
@@ -43,7 +45,7 @@ Eine moderne, performante Website für einen Fliesenleger-Meisterbetrieb in Mün
 - **8px Grid System** für konsistentes Spacing
 - **Fuge-Abstände** inspiriert von echten Fliesenfugen
 
-## 📂 Projektstruktur
+## Projektstruktur
 
 ```
 fliesenleger-website-app/
@@ -89,7 +91,7 @@ fliesenleger-website-app/
 └── tsconfig.json                 # TypeScript Configuration
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Voraussetzungen
 
@@ -136,7 +138,7 @@ NEXT_PUBLIC_BUSINESS_EMAIL=info@fliesenleger-muenchen.de
 NEXT_PUBLIC_BUSINESS_PHONE=+49 89 12345678
 ```
 
-## 🏗️ Build & Deployment
+## Build & Deployment
 
 ### Production Build
 
@@ -157,7 +159,7 @@ vercel
 
 Oder verbinde dein GitHub Repository mit [Vercel](https://vercel.com) für automatische Deployments.
 
-## 📊 Performance
+## Performance
 
 ### Core Web Vitals Ziele
 
@@ -169,35 +171,35 @@ Oder verbinde dein GitHub Repository mit [Vercel](https://vercel.com) für autom
 
 ### Optimierungen
 
-- ✅ Next.js Image Optimization (AVIF/WebP)
-- ✅ Font Optimization (display: swap)
-- ✅ Code-Splitting mit dynamic imports
-- ✅ Vercel Analytics & Speed Insights
-- ✅ Lazy Loading für Heavy Components
+- Next.js Image Optimization (AVIF/WebP)
+- Font Optimization (display: swap)
+- Code-Splitting mit dynamic imports
+- Vercel Analytics & Speed Insights
+- Lazy Loading für Heavy Components
 
-## ♿ Accessibility
+## Accessibility
 
 WCAG 2.1 AA konform:
 
-- ✅ Keyboard Navigation (Focus-Visible Styles)
-- ✅ Skip Links
-- ✅ ARIA Labels für alle interaktiven Elemente
-- ✅ Touch Targets min. 48x48px
-- ✅ Reduced Motion Support
-- ✅ Screen Reader Support (sr-only Klassen)
-- ✅ High Contrast Mode Support
-- ✅ Semantisches HTML
+- Keyboard Navigation (Focus-Visible Styles)
+- Skip Links
+- ARIA Labels für alle interaktiven Elemente
+- Touch Targets min. 48x48px
+- Reduced Motion Support
+- Screen Reader Support (sr-only Klassen)
+- High Contrast Mode Support
+- Semantisches HTML
 
-## 🔍 SEO
+## SEO
 
 ### Features
 
-- ✅ Schema.org Structured Data (LocalBusiness, Website)
-- ✅ OpenGraph Meta Tags
-- ✅ Sitemap & robots.txt
-- ✅ Semantic HTML
-- ✅ Mobile-First Responsive Design
-- ✅ Fast Page Load Times
+- Schema.org Structured Data (LocalBusiness, Website)
+- OpenGraph Meta Tags
+- Sitemap & robots.txt
+- Semantic HTML
+- Mobile-First Responsive Design
+- Fast Page Load Times
 
 ### Keywords
 
@@ -207,7 +209,7 @@ WCAG 2.1 AA konform:
 - Naturstein verlegen München
 - Fliesenleger Meisterbetrieb München
 
-## 📱 Responsive Design
+## Responsive Design
 
 ### Breakpoints
 
@@ -224,7 +226,7 @@ WCAG 2.1 AA konform:
 - Mobile Navigation mit Slide-out Menu
 - Sticky Contact Bar auf Mobile
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # TypeScript Type Check
@@ -234,7 +236,7 @@ npm run build
 npm run lint
 ```
 
-## 📝 Deployment Checklist
+## Deployment Checklist
 
 ### Pre-Deployment
 
@@ -254,15 +256,15 @@ npm run lint
 - [ ] Alle Links funktionieren
 - [ ] Telefon-Links auf Mobile testen
 
-## 🔐 Security
+## Security
 
-- ✅ Environment Variables nie committen (`.env.local`)
-- ✅ API Routes mit Zod Validation
-- ✅ CSRF Protection (Next.js built-in)
-- ✅ XSS Protection durch React
-- ✅ Optional: Rate Limiting für API Routes
+- Environment Variables nie committen (`.env.local`)
+- API Routes mit Zod Validation
+- CSRF Protection (Next.js built-in)
+- XSS Protection durch React
+- Optional: Rate Limiting für API Routes
 
-## 📚 Dokumentation
+## Dokumentation
 
 Die komplette Dokumentation befindet sich im `/docs` Ordner:
 
@@ -279,7 +281,7 @@ Die komplette Dokumentation befindet sich im `/docs` Ordner:
 11. Best Practices
 12. Project Structure
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork das Repository
 2. Erstelle einen Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -287,11 +289,11 @@ Die komplette Dokumentation befindet sich im `/docs` Ordner:
 4. Push zum Branch (`git push origin feature/AmazingFeature`)
 5. Öffne einen Pull Request
 
-## 📄 License
+## License
 
 Dieses Projekt ist privat und nicht für die öffentliche Nutzung bestimmt.
 
-## 👨‍💻 Entwickelt mit
+## Entwickelt mit
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
