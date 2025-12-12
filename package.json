@@ -17,7 +17,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.561.0",
-    "next": "^15.5.9",
+    "next": "^16.0.10",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-hook-form": "^7.68.0",
@@ -32,11 +32,11 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
-    "eslint-config-next": "^15.5.9",
+    "eslint-config-next": "^16.0.10",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   },
   "optionalDependencies": {
-    "@next/swc-darwin-arm64": "^15.5.4"
+    "@next/swc-darwin-arm64": "^16.0.10"
   }
 }
