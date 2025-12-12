@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 
-// Zod Schema for Contact Form Validation
+// Zod Schema for Contact Form Validation (Zod v4 syntax)
 const contactSchema = z.object({
-  name: z.string().min(2, 'Name muss mindestens 2 Zeichen lang sein'),
-  email: z.string().email('Ungültige E-Mail-Adresse'),
+  name: z.string().min(2, { error: 'Name muss mindestens 2 Zeichen lang sein' }),
+  email: z.email({ error: 'Ungültige E-Mail-Adresse' }),
   phone: z.string().optional(),
-  service: z.string().min(1, 'Bitte wählen Sie eine Leistung aus'),
-  message: z.string().min(10, 'Nachricht muss mindestens 10 Zeichen lang sein'),
+  service: z.string().min(1, { error: 'Bitte wählen Sie eine Leistung aus' }),
+  message: z.string().min(10, { error: 'Nachricht muss mindestens 10 Zeichen lang sein' }),
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;
@@ -20,10 +20,17 @@ export async function POST(request: NextRequest) {
     const validationResult = contactSchema.safeParse(body);
 
     if (!validationResult.success) {
+      // Zod v4: Use z.prettifyError or manual error extraction
+      const fieldErrors: Record<string, string[]> = {};
+      for (const issue of validationResult.error.issues) {
+        const path = issue.path.join('.');
+        if (!fieldErrors[path]) fieldErrors[path] = [];
+        fieldErrors[path].push(issue.message);
+      }
       return NextResponse.json(
         {
           error: 'Validierungsfehler',
-          details: validationResult.error.flatten().fieldErrors,
+          details: fieldErrors,
         },
         { status: 400 }
       );
