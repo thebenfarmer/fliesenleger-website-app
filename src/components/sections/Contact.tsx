@@ -134,7 +134,7 @@ export default function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="flex h-11 w-full rounded-md border border-input bg-background px-4 py-2.5 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 transition-colors"
+                    className="flex h-11 w-full rounded-md border border-input bg-background px-4 py-2.5 text-base focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 transition-colors"
                   >
                     <option value="">Bitte wählen...</option>
                     <option value="bodenfliesen">Bodenfliesen</option>
@@ -185,7 +185,7 @@ export default function Contact() {
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -200,7 +200,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -215,7 +215,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -229,7 +229,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <div>

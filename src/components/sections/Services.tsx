@@ -114,7 +114,7 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
                     {/* Icon */}
-                    <div className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/90 backdrop-blur-sm">
+                    <div className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/90 backdrop-blur-xs">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                   </div>

@@ -28,7 +28,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(
             'flex h-11 w-full rounded-md border border-input bg-background px-4 py-2.5 text-base',
             'placeholder:text-muted-foreground',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
+            'focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1',
             'disabled:cursor-not-allowed disabled:opacity-50',
             'transition-colors',
             error && 'border-red-500 focus-visible:ring-red-500',

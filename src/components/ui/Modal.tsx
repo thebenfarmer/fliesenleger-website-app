@@ -94,7 +94,7 @@ export default function Modal({
           aria-describedby={description ? 'modal-description' : undefined}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-xs" />
 
           {/* Modal Content */}
           <motion.div

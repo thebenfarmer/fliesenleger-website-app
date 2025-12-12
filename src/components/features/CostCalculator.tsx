@@ -192,7 +192,7 @@ export default function CostCalculator() {
                           value={length}
                           onChange={(e) => setLength(e.target.value)}
                           placeholder="z.B. 4.5"
-                          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+                          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
                         />
                       </div>
                       <div>
@@ -207,7 +207,7 @@ export default function CostCalculator() {
                           value={width}
                           onChange={(e) => setWidth(e.target.value)}
                           placeholder="z.B. 3.2"
-                          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+                          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
                         />
                       </div>
                     </div>
@@ -253,7 +253,7 @@ export default function CostCalculator() {
                           value={height}
                           onChange={(e) => setHeight(e.target.value)}
                           placeholder="z.B. 2.4"
-                          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+                          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
                         />
                       </motion.div>
                     )}

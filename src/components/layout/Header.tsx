@@ -40,7 +40,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary flex-shrink-0">
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary shrink-0">
               <span className="text-2xl font-bold text-white">F</span>
             </div>
             <div>

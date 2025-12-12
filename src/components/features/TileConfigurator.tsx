@@ -210,7 +210,7 @@ export default function TileConfigurator() {
 
                     {/* Room Indicator */}
                     <div className="absolute left-4 top-4">
-                      <Badge variant="default" size="md" className="bg-white/90 backdrop-blur-sm">
+                      <Badge variant="default" size="md" className="bg-white/90 backdrop-blur-xs">
                         {selectedRoom.name}
                       </Badge>
                     </div>
@@ -219,21 +219,21 @@ export default function TileConfigurator() {
                     <div className="absolute right-4 top-4 flex gap-2">
                       <button
                         onClick={handleReset}
-                        className="rounded-lg bg-white/90 p-2 backdrop-blur-sm transition-all hover:bg-white hover:shadow-lg"
+                        className="rounded-lg bg-white/90 p-2 backdrop-blur-xs transition-all hover:bg-white hover:shadow-lg"
                         title="Zurücksetzen"
                       >
                         <RotateCcw className="h-5 w-5 text-foreground" />
                       </button>
                       <button
                         onClick={handleDownload}
-                        className="rounded-lg bg-white/90 p-2 backdrop-blur-sm transition-all hover:bg-white hover:shadow-lg"
+                        className="rounded-lg bg-white/90 p-2 backdrop-blur-xs transition-all hover:bg-white hover:shadow-lg"
                         title="Screenshot herunterladen"
                       >
                         <Download className="h-5 w-5 text-foreground" />
                       </button>
                       <button
                         onClick={handleShare}
-                        className="rounded-lg bg-white/90 p-2 backdrop-blur-sm transition-all hover:bg-white hover:shadow-lg"
+                        className="rounded-lg bg-white/90 p-2 backdrop-blur-xs transition-all hover:bg-white hover:shadow-lg"
                         title="Design teilen"
                       >
                         <Share2 className="h-5 w-5 text-foreground" />
@@ -304,7 +304,7 @@ export default function TileConfigurator() {
                         )}
                       >
                         <div
-                          className="h-12 w-12 flex-shrink-0 rounded-md border border-border"
+                          className="h-12 w-12 shrink-0 rounded-md border border-border"
                           style={{ backgroundColor: pattern.color }}
                         />
                         <div className="flex-1">
@@ -339,7 +339,7 @@ export default function TileConfigurator() {
                         )}
                       >
                         <div
-                          className="h-12 w-12 flex-shrink-0 rounded-md border border-border"
+                          className="h-12 w-12 shrink-0 rounded-md border border-border"
                           style={{ backgroundColor: pattern.color }}
                         />
                         <div className="flex-1">

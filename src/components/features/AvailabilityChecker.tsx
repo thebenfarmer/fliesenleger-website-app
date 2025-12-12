@@ -291,7 +291,7 @@ export default function AvailabilityChecker() {
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             placeholder="Max Mustermann"
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                            className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
                           />
                         </div>
 
@@ -308,7 +308,7 @@ export default function AvailabilityChecker() {
                               value={formData.email}
                               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                               placeholder="max@beispiel.de"
-                              className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                              className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
                             />
                           </div>
                           <div>
@@ -323,7 +323,7 @@ export default function AvailabilityChecker() {
                               value={formData.phone}
                               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                               placeholder="089 / 123 456"
-                              className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                              className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
                             />
                           </div>
                         </div>
@@ -340,7 +340,7 @@ export default function AvailabilityChecker() {
                             value={formData.address}
                             onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                             placeholder="Musterstraße 123, 80333 München"
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                            className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
                           />
                         </div>
 
@@ -354,7 +354,7 @@ export default function AvailabilityChecker() {
                             value={formData.message}
                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                             placeholder="Beschreiben Sie kurz Ihr Vorhaben..."
-                            className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                            className="w-full rounded-lg border border-border bg-background px-4 py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
                           />
                         </div>
 
@@ -421,19 +421,19 @@ export default function AvailabilityChecker() {
                         <h4 className="mb-3 font-semibold">Was passiert jetzt?</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start">
-                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
                             <span>Sie erhalten eine Bestätigungs-E-Mail an <strong>{formData.email}</strong></span>
                           </li>
                           <li className="flex items-start">
-                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
                             <span>Wir rufen Sie vorher unter <strong>{formData.phone}</strong> an</span>
                           </li>
                           <li className="flex items-start">
-                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
                             <span>Unser Meister kommt pünktlich zu Ihnen nach <strong>{formData.address}</strong></span>
                           </li>
                           <li className="flex items-start">
-                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                            <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
                             <span>Sie erhalten noch am selben Tag ein kostenloses Angebot</span>
                           </li>
                         </ul>

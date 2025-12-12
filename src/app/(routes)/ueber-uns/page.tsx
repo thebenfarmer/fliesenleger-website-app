@@ -137,7 +137,7 @@ export default function UeberUnsPage() {
                 <div className="space-y-6">
                   {timeline.map((item) => (
                     <div key={item.year} className="flex gap-6">
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white font-bold">
                           {item.year.slice(-2)}
                         </div>

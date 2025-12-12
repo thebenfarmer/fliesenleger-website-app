@@ -85,7 +85,7 @@ export default function Footer() {
             <h4 className="mb-4 text-base font-semibold text-primary">Kontakt</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-gray-400">
                   Musterstraße 123
                   <br />
@@ -93,7 +93,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                <Phone className="h-5 w-5 text-primary shrink-0" />
                 <a
                   href="tel:+4989123456"
                   className="text-sm text-gray-400 hover:text-primary transition-colors"
@@ -102,7 +102,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                <Mail className="h-5 w-5 text-primary shrink-0" />
                 <a
                   href="mailto:info@fliesenleger-muenchen.de"
                   className="text-sm text-gray-400 hover:text-primary transition-colors"
@@ -111,7 +111,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <Clock className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-gray-400">
                   Mo-Fr: 08:00 - 18:00 Uhr
                   <br />

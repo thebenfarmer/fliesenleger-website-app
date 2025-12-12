@@ -232,7 +232,7 @@ export default function ChatBot() {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Nachricht eingeben..."
-                  className="flex-1 rounded-full border border-border bg-background px-4 py-2.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+                  className="flex-1 rounded-full border border-border bg-background px-4 py-2.5 text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
                   disabled={isTyping}
                 />
                 <button

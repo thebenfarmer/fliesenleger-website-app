@@ -241,7 +241,7 @@ export default function PriceGuessGame() {
                                 onChange={(e) => setInputValue(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && handleGuess()}
                                 placeholder="z.B. 12000"
-                                className="w-full rounded-lg border border-border bg-background px-4 py-4 pr-12 text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+                                className="w-full rounded-lg border border-border bg-background px-4 py-4 pr-12 text-lg font-semibold focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
                               />
                               <span className="absolute right-4 top-1/2 -translate-y-1/2 text-lg font-semibold text-muted-foreground">
                                 €

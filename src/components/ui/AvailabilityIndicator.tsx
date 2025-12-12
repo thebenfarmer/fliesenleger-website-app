@@ -40,7 +40,7 @@ export default function AvailabilityIndicator({
           : 'border-blue-500 bg-blue-50'
       } ${className}`}
     >
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         {urgency === 'high' ? (
           <AlertCircle className="h-5 w-5 text-orange-600" />
         ) : (

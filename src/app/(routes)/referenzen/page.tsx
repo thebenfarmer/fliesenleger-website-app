@@ -128,7 +128,7 @@ export default function ReferenzenPage() {
                       <ul className="grid grid-cols-2 gap-2">
                         {project.highlights.map((highlight) => (
                           <li key={highlight} className="flex items-start text-sm">
-                            <span className="mr-2 mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                            <span className="mr-2 mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                             {highlight}
                           </li>
                         ))}

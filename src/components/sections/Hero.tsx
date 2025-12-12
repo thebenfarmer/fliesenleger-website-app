@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="container relative z-10 mx-auto px-4 py-12 sm:py-20">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="mb-4 sm:mb-6 inline-flex items-center rounded-full bg-primary/20 px-4 py-2 backdrop-blur-sm">
+          <div className="mb-4 sm:mb-6 inline-flex items-center rounded-full bg-primary/20 px-4 py-2 backdrop-blur-xs">
             <span className="text-sm font-medium text-white">
               🏆 Meisterbetrieb seit 1998
             </span>
@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="mb-10 grid grid-cols-2 gap-4">
             {features.map((feature) => (
               <div key={feature} className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                 <span className="text-sm font-medium text-white">{feature}</span>
               </div>
             ))}
