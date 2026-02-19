@@ -726,7 +726,7 @@ export default function BathroomRenovationCalculator() {
                         href="#contact"
                         className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-primary shadow-lg transition-all hover:bg-primary-50 hover:shadow-xl"
                       >
-                        Verbindlichen Festpreis erhalten -- in 48 Stunden
+                        Verbindlichen Festpreis erhalten – in 48 Stunden
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </a>
                       <button

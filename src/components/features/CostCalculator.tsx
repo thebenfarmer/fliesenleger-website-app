@@ -370,7 +370,7 @@ export default function CostCalculator() {
                             Das ist eine erste Schätzung.
                           </h3>
                           <p className="mb-4 text-sm text-muted-foreground">
-                            Ihren verbindlichen Festpreis erhalten Sie nach einer kostenlosen Vor-Ort-Beratung -- garantiert ohne Nachforderungen.
+                            Ihren verbindlichen Festpreis erhalten Sie nach einer kostenlosen Vor-Ort-Beratung – garantiert ohne Nachforderungen.
                           </p>
                           <a
                             href="#contact"

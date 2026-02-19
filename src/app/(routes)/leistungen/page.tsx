@@ -159,7 +159,7 @@ export default function LeistungenPage() {
                 </p>
                 <Link href="/kontakt">
                   <Button variant="primary" size="lg">
-                    Angebot für Ihr Projekt anfordern -- kostenlos und mit Festpreis
+                    Angebot für Ihr Projekt anfordern – kostenlos und mit Festpreis
                   </Button>
                 </Link>
               </div>

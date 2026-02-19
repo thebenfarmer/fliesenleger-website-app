@@ -269,7 +269,7 @@ export const EXTERNAL_SERVICES = {
 export const ERROR_MESSAGES = {
   generic: 'Da hat etwas nicht geklappt. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.',
   network: 'Keine Internetverbindung. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.',
-  validation: 'Bitte prüfen Sie Ihre Eingaben -- wir benötigen mindestens Ihren Namen und eine Kontaktmöglichkeit.',
+  validation: 'Bitte prüfen Sie Ihre Eingaben – wir benötigen mindestens Ihren Namen und eine Kontaktmöglichkeit.',
   rateLimit: 'Sie haben bereits eine Anfrage gesendet. Wir melden uns zeitnah bei Ihnen.',
   emailSend: 'Die Nachricht konnte leider nicht gesendet werden. Bitte rufen Sie uns an: 089 / 123 456.',
 } as const;
@@ -279,7 +279,7 @@ export const ERROR_MESSAGES = {
 // ============================================================================
 
 export const SUCCESS_MESSAGES = {
-  contactForm: 'Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden bei Ihnen -- versprochen.',
+  contactForm: 'Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden bei Ihnen – versprochen.',
   quoteForm: 'Ihre Anfrage wurde gesendet. In 48 Stunden erhalten Sie Ihr verbindliches Festpreis-Angebot.',
   newsletter: 'Sie wurden erfolgreich für unseren Newsletter angemeldet.',
 } as const;

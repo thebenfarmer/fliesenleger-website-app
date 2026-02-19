@@ -122,7 +122,7 @@ export default function AvailabilityChecker() {
             Wann kann Ihr Projekt starten?
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Als Meisterbetrieb betreuen wir nur 2-3 Projekte gleichzeitig -- für volle
+            Als Meisterbetrieb betreuen wir nur 2-3 Projekte gleichzeitig – für volle
             Aufmerksamkeit auf Ihr Projekt. Prüfen Sie unsere aktuelle Verfügbarkeit.
           </p>
         </div>

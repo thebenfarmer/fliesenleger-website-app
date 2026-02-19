@@ -174,7 +174,7 @@ export default function ReferenzenPage() {
                 </p>
                 <Link href="/kontakt">
                   <Button variant="primary" size="lg">
-                    Ihr Projekt könnte das nächste sein -- jetzt anfragen
+                    Ihr Projekt könnte das nächste sein – jetzt anfragen
                   </Button>
                 </Link>
               </div>

@@ -109,7 +109,7 @@ export default function Portfolio() {
             href="/referenzen"
             className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors"
           >
-            Ihr Projekt könnte das nächste sein -- jetzt anfragen
+            Ihr Projekt könnte das nächste sein – jetzt anfragen
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

@@ -27,7 +27,7 @@ export default function MaterialienPage() {
                 Welches Material passt zu Ihrem Raum? Wir beraten ehrlich.
               </h1>
               <p className="text-lg text-primary-100">
-                Feinsteinzeug, Naturstein, Mosaik oder Großformat -- jedes Material hat
+                Feinsteinzeug, Naturstein, Mosaik oder Großformat – jedes Material hat
                 Stärken und Grenzen. Wir zeigen Ihnen beides.
               </p>
             </div>

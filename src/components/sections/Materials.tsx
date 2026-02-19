@@ -80,7 +80,7 @@ export default function Materials() {
             Materialien
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Materialien, die wir empfehlen -- und warum
+            Materialien, die wir empfehlen – und warum
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Von klassischem Feinsteinzeug bis zu edlem Marmor. Wir beraten Sie
@@ -154,7 +154,7 @@ export default function Materials() {
             href="/materialien"
             className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors"
           >
-            Materialberatung bei Ihnen vor Ort -- kostenlos
+            Materialberatung bei Ihnen vor Ort – kostenlos
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

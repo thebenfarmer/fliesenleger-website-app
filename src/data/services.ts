@@ -13,7 +13,7 @@ export const services: Service[] = [
   {
     id: 'bodenfliesen',
     title: 'Bodenfliesen',
-    description: 'Bodenfliesen die 20 Jahre halten -- für Wohnräume, die Eindruck machen. Ob Feinsteinzeug, Großformat oder Holzoptik: Wir bereiten den Untergrund fachgerecht vor, verlegen mit Präzision und sorgen dafür, dass Ihre Fußbodenheizung optimal arbeitet.',
+    description: 'Bodenfliesen die 20 Jahre halten – für Wohnräume, die Eindruck machen. Ob Feinsteinzeug, Großformat oder Holzoptik: Wir bereiten den Untergrund fachgerecht vor, verlegen mit Präzision und sorgen dafür, dass Ihre Fußbodenheizung optimal arbeitet.',
     icon: 'Grid3x3',
     features: [
       'Wohnbereich',
@@ -28,7 +28,7 @@ export const services: Service[] = [
   {
     id: 'wandfliesen',
     title: 'Wandfliesen',
-    description: 'Wandfliesen die jeden Morgen gut aussehen -- präzise verlegt, fugenperfekt. Von der Küchenrückwand bis zum Vollbad: Jede Fliese sitzt, jede Fuge ist gleichmäßig. Denn im täglichen Gebrauch zeigt sich, wer sauber arbeitet.',
+    description: 'Wandfliesen die jeden Morgen gut aussehen – präzise verlegt, fugenperfekt. Von der Küchenrückwand bis zum Vollbad: Jede Fliese sitzt, jede Fuge ist gleichmäßig. Denn im täglichen Gebrauch zeigt sich, wer sauber arbeitet.',
     icon: 'Square',
     features: [
       'Badezimmer',
@@ -43,7 +43,7 @@ export const services: Service[] = [
   {
     id: 'naturstein',
     title: 'Naturstein',
-    description: 'Marmor, Granit, Schiefer -- millimetergenau verlegt für zeitlose Eleganz. Naturstein verzeiht keine Fehler. Deshalb braucht es Erfahrung, die richtige Versiegelung und ein Auge fürs Detail. Wir bringen alle drei mit.',
+    description: 'Marmor, Granit, Schiefer – millimetergenau verlegt für zeitlose Eleganz. Naturstein verzeiht keine Fehler. Deshalb braucht es Erfahrung, die richtige Versiegelung und ein Auge fürs Detail. Wir bringen alle drei mit.',
     icon: 'Gem',
     features: [
       'Marmor',
@@ -58,7 +58,7 @@ export const services: Service[] = [
   {
     id: 'mosaik',
     title: 'Mosaik',
-    description: 'Handverlesene Mosaikkunst -- der Akzent, der Ihr Bad einzigartig macht. Glas, Keramik oder Naturstein: Mosaik ist Präzisionsarbeit auf kleinstem Raum. Jedes Steinchen muss sitzen -- und bei uns sitzt es.',
+    description: 'Handverlesene Mosaikkunst – der Akzent, der Ihr Bad einzigartig macht. Glas, Keramik oder Naturstein: Mosaik ist Präzisionsarbeit auf kleinstem Raum. Jedes Steinchen muss sitzen – und bei uns sitzt es.',
     icon: 'Sparkles',
     features: [
       'Glasmosaik',
@@ -88,7 +88,7 @@ export const services: Service[] = [
   {
     id: 'aussenbereich',
     title: 'Außenbereich',
-    description: 'Frostfeste Terrassen und Balkone -- einmal verlegt, jahrelang genossen. Münchner Winter sind hart. Unsere Außenverlegung hält ihnen stand: Frostbeständiges Feinsteinzeug, fachgerechtes Gefälle und rutschfeste Oberflächen.',
+    description: 'Frostfeste Terrassen und Balkone – einmal verlegt, jahrelang genossen. Münchner Winter sind hart. Unsere Außenverlegung hält ihnen stand: Frostbeständiges Feinsteinzeug, fachgerechtes Gefälle und rutschfeste Oberflächen.',
     icon: 'TreePine',
     features: [
       'Terrasse',

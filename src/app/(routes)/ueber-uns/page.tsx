@@ -24,7 +24,7 @@ const values = [
     icon: Users,
     title: 'Festangestelltes Team',
     description:
-      'Ein Meister und fünf Gesellen -- einige seit über 10 Jahren bei uns. Keine Subunternehmer.',
+      'Ein Meister und fünf Gesellen – einige seit über 10 Jahren bei uns. Keine Subunternehmer.',
   },
   {
     icon: Target,
@@ -95,11 +95,11 @@ export default function UeberUnsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-                Münchner Meisterbetrieb seit 1998. Nicht nur Handwerker -- Ihr Partner.
+                Münchner Meisterbetrieb seit 1998. Nicht nur Handwerker – Ihr Partner.
               </h1>
               <p className="text-lg text-primary-100">
                 Ein Meister, fünf festangestellte Gesellen und eine Überzeugung:
-                Wer sein Handwerk liebt, gibt Garantien -- keine Ausreden.
+                Wer sein Handwerk liebt, gibt Garantien – keine Ausreden.
               </p>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function UeberUnsPage() {
                   <p className="text-muted-foreground">
                     Was 1998 als kleiner Handwerksbetrieb begann, ist heute ein
                     Meisterbetrieb mit über 500 abgeschlossenen Projekten in München.
-                    Die gleichen Hände, die Ihr Projekt planen, führen es auch aus --
+                    Die gleichen Hände, die Ihr Projekt planen, führen es auch aus –
                     mit festangestellten Gesellen, nicht Subunternehmern.
                   </p>
                   <p className="text-muted-foreground mt-4">

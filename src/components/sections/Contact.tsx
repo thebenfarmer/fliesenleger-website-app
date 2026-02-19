@@ -83,7 +83,7 @@ export default function Contact() {
                 <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-500" />
                 <h3 className="mb-2 text-2xl font-bold">Ihre Anfrage ist eingegangen!</h3>
                 <p className="text-muted-foreground">
-                  Wir melden uns innerhalb von 24 Stunden bei Ihnen -- versprochen.
+                  Wir melden uns innerhalb von 24 Stunden bei Ihnen – versprochen.
                   In 48 Stunden erhalten Sie Ihr verbindliches Festpreis-Angebot.
                 </p>
                 <Button

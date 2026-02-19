@@ -30,15 +30,16 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="mb-4 sm:mb-6 text-3xl font-bold text-white md:text-5xl lg:text-6xl">
-            500+ Münchner Familien vertrauen unserem{' '}
-            <span className="text-primary">Dreifach-Garantie-System</span>
+            Badsanierung in München –{' '}
+            <span className="text-primary">dreifach abgesichert</span>, zum
+            garantierten Festpreis
           </h1>
 
           {/* Description */}
           <p className="mb-8 text-lg text-gray-200 md:text-xl">
-            Festpreis-Garantie. 30-Tage-Zufriedenheitsgarantie. 5-Jahre-Vollgarantie
-            auf Material und Arbeit. Meisterhafte Fliesenverlegung und Badsanierung
-            -- ohne Risiko für Sie.
+            Meisterhafte Fliesenverlegung mit dem Dreifach-Garantie-System:
+            Festpreis ohne Nachforderungen, 30-Tage-Zufriedenheitsgarantie und
+            5-Jahre-Vollgarantie auf Material und Arbeit.
           </p>
 
           {/* Features */}

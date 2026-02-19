@@ -9,12 +9,12 @@ const faqs = [
   {
     question: 'Was kostet eine Badsanierung in München?',
     answer:
-      'Ein Standard-Bad (6-8 m²) kostet zwischen 15.000 und 25.000 € inkl. MwSt. -- inklusive aller Materialien und Arbeiten. Premium-Bäder mit Naturstein beginnen ab 25.000 € inkl. MwSt. Bei uns erhalten Sie nach der kostenlosen Vor-Ort-Beratung einen verbindlichen Festpreis. Dieser Festpreis ist Ihr Endpreis -- garantiert, ohne Nachforderungen.',
+      'Ein Standard-Bad (6-8 m²) kostet zwischen 15.000 und 25.000 € inkl. MwSt. – inklusive aller Materialien und Arbeiten. Premium-Bäder mit Naturstein beginnen ab 25.000 € inkl. MwSt. Bei uns erhalten Sie nach der kostenlosen Vor-Ort-Beratung einen verbindlichen Festpreis. Dieser Festpreis ist Ihr Endpreis – garantiert, ohne Nachforderungen.',
   },
   {
     question: 'Wie lange dauert eine Badsanierung?',
     answer:
-      'Ein Standard-Bad sanieren wir in 5-7 Werktagen. Größere Projekte mit Naturstein oder Sonderanfertigungen dauern 10-14 Tage. Den exakten Zeitplan erhalten Sie vor Projektstart schriftlich -- und er wird eingehalten.',
+      'Ein Standard-Bad sanieren wir in 5-7 Werktagen. Größere Projekte mit Naturstein oder Sonderanfertigungen dauern 10-14 Tage. Den exakten Zeitplan erhalten Sie vor Projektstart schriftlich – und er wird eingehalten.',
   },
   {
     question: 'Was ist im Festpreis enthalten?',
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'Arbeiten Sie mit Subunternehmern?',
     answer:
-      'Nein. Unser Team besteht aus einem Meister und fünf festangestellten Gesellen -- einige davon seit über 10 Jahren bei uns. Die gleichen Hände, die Ihr Projekt planen, führen es auch aus.',
+      'Nein. Unser Team besteht aus einem Meister und fünf festangestellten Gesellen – einige davon seit über 10 Jahren bei uns. Die gleichen Hände, die Ihr Projekt planen, führen es auch aus.',
   },
 ];
 
@@ -49,10 +49,10 @@ export default function FAQ() {
             Häufige Fragen
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Häufige Fragen -- ehrlich beantwortet
+            Häufige Fragen – ehrlich beantwortet
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Preise, Zeitrahmen, Garantien, Ablauf -- die wichtigsten Antworten
+            Preise, Zeitrahmen, Garantien, Ablauf – die wichtigsten Antworten
             auf einen Blick.
           </p>
         </div>

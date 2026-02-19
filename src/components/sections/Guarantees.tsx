@@ -33,7 +33,7 @@ export default function Guarantees() {
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Nur wenige Fliesenleger in München bieten Ihnen diese drei Garantien
-            in Kombination. Wir übernehmen das Risiko -- damit Sie keins haben.
+            in Kombination. Wir übernehmen das Risiko – damit Sie keins haben.
           </p>
         </div>
 

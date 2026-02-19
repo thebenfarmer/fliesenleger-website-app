@@ -5,9 +5,9 @@ const steps = [
   {
     number: 1,
     icon: Phone,
-    title: 'Anfrage -- Antwort in 24 Stunden',
+    title: 'Anfrage – Antwort in 24 Stunden',
     description:
-      'Sie kontaktieren uns per Telefon, Formular oder WhatsApp. Innerhalb von 24 Stunden melden wir uns bei Ihnen -- garantiert.',
+      'Sie kontaktieren uns per Telefon, Formular oder WhatsApp. Innerhalb von 24 Stunden melden wir uns bei Ihnen – garantiert.',
     duration: '< 24h',
   },
   {
@@ -23,7 +23,7 @@ const steps = [
     icon: Palette,
     title: 'Festpreis-Angebot in 48 Stunden',
     description:
-      'Sie erhalten ein verbindliches Festpreis-Angebot -- detailliert aufgeschlüsselt, ohne Kleingedrucktes. Der Angebotspreis ist Ihr Endpreis.',
+      'Sie erhalten ein verbindliches Festpreis-Angebot – detailliert aufgeschlüsselt, ohne Kleingedrucktes. Der Angebotspreis ist Ihr Endpreis.',
     duration: '48h',
   },
   {
@@ -51,7 +51,7 @@ export default function Process() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            In 5 Schritten zu Ihrem neuen Raum -- transparent und planbar
+            In 5 Schritten zu Ihrem neuen Raum – transparent und planbar
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Von der Anfrage bis zur Übergabe: klarer Zeitplan, garantierter

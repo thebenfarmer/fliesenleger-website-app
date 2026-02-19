@@ -25,7 +25,7 @@ const services: Service[] = [
   {
     id: 'bodenfliesen',
     title: 'Bodenfliesen',
-    description: 'Bodenfliesen die 20 Jahre halten -- für Wohnräume, die Eindruck machen.',
+    description: 'Bodenfliesen die 20 Jahre halten – für Wohnräume, die Eindruck machen.',
     icon: 'Grid3x3',
     image: '/images/services/bodenfliesen.jpg',
     priceRange: 'ab 45 €/m² inkl. MwSt.',
@@ -33,7 +33,7 @@ const services: Service[] = [
   {
     id: 'wandfliesen',
     title: 'Wandfliesen',
-    description: 'Wandfliesen die jeden Morgen gut aussehen -- präzise verlegt, fugenperfekt.',
+    description: 'Wandfliesen die jeden Morgen gut aussehen – präzise verlegt, fugenperfekt.',
     icon: 'Square',
     image: '/images/services/wandfliesen.jpg',
     priceRange: 'ab 38 €/m² inkl. MwSt.',
@@ -41,7 +41,7 @@ const services: Service[] = [
   {
     id: 'naturstein',
     title: 'Naturstein',
-    description: 'Marmor, Granit, Schiefer -- millimetergenau verlegt für zeitlose Eleganz.',
+    description: 'Marmor, Granit, Schiefer – millimetergenau verlegt für zeitlose Eleganz.',
     icon: 'Gem',
     image: '/images/services/naturstein.jpg',
     priceRange: 'ab 85 €/m² inkl. MwSt.',
@@ -49,7 +49,7 @@ const services: Service[] = [
   {
     id: 'mosaik',
     title: 'Mosaik',
-    description: 'Handverlesene Mosaikkunst -- der Akzent, der Ihr Bad einzigartig macht.',
+    description: 'Handverlesene Mosaikkunst – der Akzent, der Ihr Bad einzigartig macht.',
     icon: 'Sparkles',
     image: '/images/services/mosaik.jpg',
     priceRange: 'ab 65 €/m² inkl. MwSt.',
@@ -65,7 +65,7 @@ const services: Service[] = [
   {
     id: 'aussenbereich',
     title: 'Außenbereich',
-    description: 'Frostfeste Terrassen und Balkone -- einmal verlegt, jahrelang genossen.',
+    description: 'Frostfeste Terrassen und Balkone – einmal verlegt, jahrelang genossen.',
     icon: 'TreePine',
     image: '/images/services/aussenbereich.jpg',
     priceRange: 'ab 52 €/m² inkl. MwSt.',
@@ -82,7 +82,7 @@ export default function Services() {
             Leistungen
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Vom Gäste-WC bis zur Villa -- für jedes Projekt die richtige Lösung
+            Vom Gäste-WC bis zur Villa – für jedes Projekt die richtige Lösung
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Transparente ab-Preise inkl. MwSt. Festpreis-Angebot nach kostenloser Beratung.

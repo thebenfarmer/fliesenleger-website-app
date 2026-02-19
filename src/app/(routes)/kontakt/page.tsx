@@ -24,7 +24,7 @@ export default function KontaktPage() {
               </h1>
               <p className="text-lg text-primary-100">
                 Kostenlose Beratung. Verbindlicher Festpreis. Dreifach-Garantie auf jedes
-                Projekt. Starten Sie jetzt -- wir melden uns innerhalb von 24 Stunden.
+                Projekt. Starten Sie jetzt – wir melden uns innerhalb von 24 Stunden.
               </p>
             </div>
           </div>

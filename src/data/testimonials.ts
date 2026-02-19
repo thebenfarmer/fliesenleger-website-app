@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     date: '2025-11-15',
     project: 'Komplett-Badsanierung',
-    text: 'Wir hatten ehrlich gesagt Angst vor einer Kostenexplosion. Ein Bekannter hat bei seiner Badsanierung 40% mehr bezahlt als im Angebot stand. Bei diesem Meisterbetrieb war der Festpreis tatsächlich der Endpreis -- auf den Cent genau. Keine einzige Nachforderung. Und das Bad ist wunderschön geworden.',
+    text: 'Wir hatten ehrlich gesagt Angst vor einer Kostenexplosion. Ein Bekannter hat bei seiner Badsanierung 40% mehr bezahlt als im Angebot stand. Bei diesem Meisterbetrieb war der Festpreis tatsächlich der Endpreis – auf den Cent genau. Keine einzige Nachforderung. Und das Bad ist wunderschön geworden.',
     verified: false,
   },
   // Einwand: ZEIT / Dauer
@@ -78,7 +78,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     date: '2025-06-30',
     project: 'Badsanierung + Gäste-WC',
-    text: 'Nach zwei Jahren ist in unserem Gäste-WC eine Silikonfuge leicht abgestanden. Ein Anruf genügt -- zwei Tage später war ein Geselle da und hat es kostenlos behoben. Das nenne ich Garantie. Nicht nur auf dem Papier, sondern in der Praxis. Wir haben diesen Betrieb seitdem dreimal weiterempfohlen.',
+    text: 'Nach zwei Jahren ist in unserem Gäste-WC eine Silikonfuge leicht abgestanden. Ein Anruf genügt – zwei Tage später war ein Geselle da und hat es kostenlos behoben. Das nenne ich Garantie. Nicht nur auf dem Papier, sondern in der Praxis. Wir haben diesen Betrieb seitdem dreimal weiterempfohlen.',
     verified: false,
   },
 ];
