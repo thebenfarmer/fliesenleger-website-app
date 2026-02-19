@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="mb-4 sm:mb-6 text-3xl font-bold text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 sm:mb-6 text-2xl font-bold text-white md:text-4xl lg:text-5xl">
             Badsanierung in München –{' '}
             <span className="text-primary">dreifach abgesichert</span>, zum
             garantierten Festpreis
@@ -88,15 +88,15 @@ export default function Hero() {
           {/* Stats */}
           <div className="mt-8 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-6 border-t border-white/20 pt-6 sm:pt-8">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">25+</div>
+              <div className="text-xl sm:text-2xl font-bold text-white">25+</div>
               <div className="text-xs sm:text-sm text-gray-300">Jahre Erfahrung</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">500+</div>
+              <div className="text-xl sm:text-2xl font-bold text-white">500+</div>
               <div className="text-xs sm:text-sm text-gray-300">Projekte in München</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">4.9</div>
+              <div className="text-xl sm:text-2xl font-bold text-white">4.9</div>
               <div className="text-xs sm:text-sm text-gray-300">Google-Bewertung</div>
             </div>
           </div>

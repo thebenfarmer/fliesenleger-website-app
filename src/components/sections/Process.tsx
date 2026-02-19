@@ -51,7 +51,7 @@ export default function Process() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             In 5 Schritten zu Ihrem neuen Raum – transparent und planbar
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">

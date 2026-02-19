@@ -31,7 +31,7 @@ export default function Portfolio() {
           <Badge variant="primary" size="md" className="mb-4">
             Referenzen
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Projekte aus Schwabing, Bogenhausen und ganz München
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">

@@ -29,7 +29,7 @@ export default function Testimonials() {
           <Badge variant="primary" size="md" className="mb-4">
             Kundenstimmen
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Warum Münchner Familien uns weiterempfehlen
           </h2>
           <div className="mx-auto flex items-center justify-center gap-2">

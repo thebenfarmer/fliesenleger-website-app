@@ -79,7 +79,7 @@ export default function Materials() {
           <Badge variant="primary" size="md" className="mb-4">
             Materialien
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Materialien, die wir empfehlen – und warum
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">

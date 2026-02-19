@@ -81,7 +81,7 @@ export default function Services() {
           <Badge variant="primary" size="md" className="mb-4">
             Leistungen
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Vom Gäste-WC bis zur Villa – für jedes Projekt die richtige Lösung
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">

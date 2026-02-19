@@ -154,7 +154,7 @@ export default function AvailabilityChecker() {
             <Calendar className="mr-2 h-4 w-4" />
             Terminbuchung
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Wann kann Ihr Projekt starten?
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">

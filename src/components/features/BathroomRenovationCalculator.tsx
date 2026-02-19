@@ -227,7 +227,7 @@ export default function BathroomRenovationCalculator() {
           <div className="space-y-4">
             <div className="text-center">
               <Bath className="mx-auto mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-2xl font-bold">Wie groß ist Ihr Badezimmer?</h3>
+              <h3 className="mb-2 text-xl font-bold">Wie groß ist Ihr Badezimmer?</h3>
               <p className="text-sm text-muted-foreground">Wählen Sie die ungefähre Größe aus</p>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
@@ -260,7 +260,7 @@ export default function BathroomRenovationCalculator() {
           <div className="space-y-4">
             <div className="text-center">
               <Sparkles className="mx-auto mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-2xl font-bold">Wandfliesen erneuern?</h3>
+              <h3 className="mb-2 text-xl font-bold">Wandfliesen erneuern?</h3>
               <p className="text-sm text-muted-foreground">Sollen die Wandfliesen neu verlegt werden?</p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -299,7 +299,7 @@ export default function BathroomRenovationCalculator() {
           <div className="space-y-4">
             <div className="text-center">
               <Layers className="mx-auto mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-2xl font-bold">Bodenfliesen erneuern?</h3>
+              <h3 className="mb-2 text-xl font-bold">Bodenfliesen erneuern?</h3>
               <p className="text-sm text-muted-foreground">Sollen neue Bodenfliesen verlegt werden?</p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -338,7 +338,7 @@ export default function BathroomRenovationCalculator() {
           <div className="space-y-4">
             <div className="text-center">
               <Droplets className="mx-auto mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-2xl font-bold">Dusche oder Badewanne?</h3>
+              <h3 className="mb-2 text-xl font-bold">Dusche oder Badewanne?</h3>
               <p className="text-sm text-muted-foreground">Was soll in Ihrem neuen Bad sein?</p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -407,7 +407,7 @@ export default function BathroomRenovationCalculator() {
           <div className="space-y-4">
             <div className="text-center">
               <Wrench className="mx-auto mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-2xl font-bold">Zusatzleistungen</h3>
+              <h3 className="mb-2 text-xl font-bold">Zusatzleistungen</h3>
               <p className="text-sm text-muted-foreground">Wählen Sie optionale Extras (mehrere möglich)</p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -466,7 +466,7 @@ export default function BathroomRenovationCalculator() {
           <div className="space-y-4">
             <div className="text-center">
               <Sparkles className="mx-auto mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-2xl font-bold">Materialqualität wählen</h3>
+              <h3 className="mb-2 text-xl font-bold">Materialqualität wählen</h3>
               <p className="text-sm text-muted-foreground">Wählen Sie Ihre bevorzugte Materiallinie</p>
             </div>
             <div className="grid gap-4">
@@ -522,7 +522,7 @@ export default function BathroomRenovationCalculator() {
                   <CheckCircle2 className="mr-2 h-4 w-4" />
                   Berechnung abgeschlossen
                 </Badge>
-                <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+                <h2 className="mb-4 text-xl font-bold md:text-3xl lg:text-4xl">
                   Ihre Badrenovierung
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -541,7 +541,7 @@ export default function BathroomRenovationCalculator() {
                           initial={{ scale: 0.8, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                          className="text-xl font-bold text-white md:text-2xl"
+                          className="text-lg font-bold text-white md:text-xl"
                         >
                           {total.toLocaleString('de-DE')}€
                         </motion.p>
@@ -553,14 +553,14 @@ export default function BathroomRenovationCalculator() {
                           <Clock className="h-5 w-5 text-white" />
                           <div>
                             <p className="text-xs text-primary-100">Geschätzte Dauer</p>
-                            <p className="text-2xl font-bold text-white">{days} Tage</p>
+                            <p className="text-xl font-bold text-white">{days} Tage</p>
                           </div>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Euro className="h-5 w-5 text-white" />
                           <div>
                             <p className="text-xs text-primary-100">Pro Tag</p>
-                            <p className="text-2xl font-bold text-white">~{Math.round(total / days).toLocaleString('de-DE')}€</p>
+                            <p className="text-xl font-bold text-white">~{Math.round(total / days).toLocaleString('de-DE')}€</p>
                           </div>
                         </div>
                       </div>
@@ -779,7 +779,7 @@ export default function BathroomRenovationCalculator() {
               <Bath className="mr-2 h-4 w-4" />
               Bad-Renovierungsrechner
             </Badge>
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+            <h2 className="mb-4 text-xl font-bold md:text-3xl lg:text-4xl">
               Was kostet Ihre Badsanierung? In 6 Schritten zur Schätzung.
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">

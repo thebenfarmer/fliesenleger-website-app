@@ -121,7 +121,7 @@ export default function CostCalculator() {
             <Calculator className="mr-2 h-4 w-4" />
             Kostenrechner
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Was kostet Ihr Projekt? Finden Sie es in 30 Sekunden heraus.
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
@@ -308,7 +308,7 @@ export default function CostCalculator() {
                               initial={{ scale: 0.8, opacity: 0 }}
                               animate={{ scale: 1, opacity: 1 }}
                               transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                              className="mt-2 text-2xl font-bold text-white md:text-3xl"
+                              className="mt-2 text-xl font-bold text-white md:text-2xl"
                             >
                               {totalCostMin.toLocaleString('de-DE', { maximumFractionDigits: 0 })}€ -{' '}
                               {totalCostMax.toLocaleString('de-DE', { maximumFractionDigits: 0 })}€
