@@ -74,7 +74,7 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="py-12 md:py-20 bg-muted/30">
+    <section id="leistungen" className="py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -106,7 +106,7 @@ export default function Services() {
                   className="h-full overflow-hidden transition-all hover:shadow-xl hover:border-primary"
                 >
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden bg-muted">
+                  <div className="relative h-48 overflow-hidden bg-muted" role="img" aria-label={`${service.title} – ${service.description}`}>
                     <div
                       className="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                       style={{ backgroundImage: `url(${service.image})` }}

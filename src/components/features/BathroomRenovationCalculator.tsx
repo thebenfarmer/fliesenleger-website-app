@@ -507,7 +507,7 @@ export default function BathroomRenovationCalculator() {
 
   if (showResult) {
     return (
-      <section className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">
+      <section id="badsanierung" className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <motion.div
@@ -770,7 +770,7 @@ export default function BathroomRenovationCalculator() {
   }
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-accent-50 via-background to-primary-50">
+    <section id="badsanierung" className="py-12 md:py-20 bg-gradient-to-br from-accent-50 via-background to-primary-50">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           {/* Header */}

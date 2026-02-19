@@ -89,7 +89,7 @@ export default function UeberUnsPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Hero Section */}
         <section className="bg-primary py-16 text-white">
           <div className="container mx-auto px-4">

@@ -41,7 +41,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section id="faq" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -66,7 +66,10 @@ export default function FAQ() {
                 className="overflow-hidden rounded-lg border-2 border-border bg-background transition-colors hover:border-primary"
               >
                 <button
+                  id={`faq-question-${index}`}
                   onClick={() => toggleFAQ(index)}
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
                   className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-muted/50"
                 >
                   <span className="pr-4 text-lg font-semibold">
@@ -80,6 +83,9 @@ export default function FAQ() {
                 </button>
 
                 <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
                   className={`transition-all ${
                     openIndex === index
                       ? 'max-h-96 opacity-100'

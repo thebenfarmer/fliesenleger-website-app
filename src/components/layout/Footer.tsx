@@ -129,26 +129,33 @@ export default function Footer() {
               © {currentYear} Fliesenleger München. Alle Rechte vorbehalten.
             </p>
 
-            <div className="flex items-center space-x-6">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
+            {/* Social links: only show when real profile URLs are configured */}
+            {(process.env.NEXT_PUBLIC_FACEBOOK_URL || process.env.NEXT_PUBLIC_INSTAGRAM_URL) && (
+              <div className="flex items-center space-x-6">
+                {process.env.NEXT_PUBLIC_FACEBOOK_URL && (
+                  <a
+                    href={process.env.NEXT_PUBLIC_FACEBOOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-primary transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                )}
+                {process.env.NEXT_PUBLIC_INSTAGRAM_URL && (
+                  <a
+                    href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-primary transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                )}
+              </div>
+            )}
 
             <div className="flex items-center space-x-4">
               {legal.map((item) => (

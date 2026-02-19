@@ -12,7 +12,7 @@ export default function DatenschutzPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">

@@ -72,7 +72,7 @@ const materials: Material[] = [
 
 export default function Materials() {
   return (
-    <section className="py-12 md:py-20 bg-muted/30">
+    <section id="materialien" className="py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">

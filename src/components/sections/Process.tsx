@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Phone, Home, Palette, Hammer, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/Card';
 
@@ -46,7 +47,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section id="ablauf" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -62,7 +63,7 @@ export default function Process() {
         {/* Process Steps */}
         <div className="relative mx-auto max-w-5xl">
           {/* Connection Line */}
-          <div className="absolute left-8 top-12 bottom-12 w-0.5 bg-border md:left-1/2 md:-translate-x-px" />
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border md:left-1/2 md:-translate-x-px" />
 
           <div className="space-y-12">
             {steps.map((step, index) => (
@@ -120,7 +121,7 @@ export default function Process() {
           <p className="mb-6 text-lg text-muted-foreground">
             Bereit für Schritt 1?
           </p>
-          <a
+          <Link
             href="/kontakt"
             className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-3 text-lg font-medium text-white transition-colors hover:bg-primary-600"
           >
@@ -138,7 +139,7 @@ export default function Process() {
                 d="M9 5l7 7-7 7"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

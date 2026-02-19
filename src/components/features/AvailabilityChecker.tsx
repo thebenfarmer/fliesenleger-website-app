@@ -17,6 +17,16 @@ interface AvailableDate {
   slots: TimeSlot[];
 }
 
+// Deterministic hash based on date string for consistent slot availability
+const dateHash = (dateStr: string, slotIndex: number): boolean => {
+  let hash = 0;
+  const seed = `${dateStr}-${slotIndex}`;
+  for (let i = 0; i < seed.length; i++) {
+    hash = ((hash << 5) - hash + seed.charCodeAt(i)) | 0;
+  }
+  return (Math.abs(hash) % 10) < 6; // ~60% available, deterministic per date+slot
+};
+
 // Generiere verfügbare Termine für die nächsten 14 Tage
 const generateAvailableDates = (): AvailableDate[] => {
   const dates: AvailableDate[] = [];
@@ -30,11 +40,11 @@ const generateAvailableDates = (): AvailableDate[] => {
     const dayOfWeek = date.getDay();
     if (dayOfWeek === 0 || dayOfWeek === 6) continue;
 
-    // Verfügbare Slots pro Tag
+    const dateStr = date.toISOString().split('T')[0];
     const allSlots = ['09:00', '10:30', '13:00', '14:30', '16:00'];
-    const slots: TimeSlot[] = allSlots.map(time => ({
+    const slots: TimeSlot[] = allSlots.map((time, idx) => ({
       time,
-      available: Math.random() > 0.4, // 60% verfügbar
+      available: dateHash(dateStr, idx),
     }));
 
     dates.push({ date, slots });
@@ -49,6 +59,8 @@ export default function AvailabilityChecker() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [step, setStep] = useState<'calendar' | 'form' | 'success'>('calendar');
   const [mounted, setMounted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => {
     setAvailableDates(generateAvailableDates());
@@ -82,10 +94,34 @@ export default function AvailabilityChecker() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Hier würde normalerweise API-Call stattfinden
-    setStep('success');
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: 'terminanfrage',
+          message: `Terminanfrage: ${selectedDate ? formatFullDate(selectedDate) : ''} um ${selectedTime} Uhr\nAdresse: ${formData.address}\n${formData.message ? `Nachricht: ${formData.message}` : ''}`,
+        }),
+      });
+
+      if (response.ok) {
+        setStep('success');
+      } else {
+        setSubmitError('Die Anfrage konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.');
+      }
+    } catch {
+      setSubmitError('Keine Internetverbindung. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const formatDate = (date: Date) => {
@@ -110,7 +146,7 @@ export default function AvailabilityChecker() {
   }
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">
+    <section id="termin" className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -367,19 +403,27 @@ export default function AvailabilityChecker() {
                           </p>
                         </div>
 
+                        {submitError && (
+                          <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4" role="alert">
+                            <p className="text-sm font-medium text-red-800">{submitError}</p>
+                          </div>
+                        )}
+
                         <div className="flex gap-3">
                           <button
                             type="button"
                             onClick={() => setStep('calendar')}
-                            className="flex-1 rounded-lg border border-border bg-background px-6 py-3 font-semibold transition-all hover:bg-muted"
+                            disabled={isSubmitting}
+                            className="flex-1 rounded-lg border border-border bg-background px-6 py-3 font-semibold transition-all hover:bg-muted disabled:opacity-50"
                           >
                             Zurück
                           </button>
                           <button
                             type="submit"
-                            className="flex-1 rounded-lg bg-primary px-6 py-3 font-semibold text-white shadow-lg transition-all hover:bg-primary-800 hover:shadow-xl"
+                            disabled={isSubmitting}
+                            className="flex-1 rounded-lg bg-primary px-6 py-3 font-semibold text-white shadow-lg transition-all hover:bg-primary-800 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                           >
-                            Termin bestätigen
+                            {isSubmitting ? 'Wird gesendet...' : 'Terminanfrage senden'}
                           </button>
                         </div>
                       </form>
@@ -409,33 +453,33 @@ export default function AvailabilityChecker() {
                       </motion.div>
 
                       <h3 className="mb-4 text-3xl font-bold text-green-600">
-                        Termin erfolgreich gebucht! 🎉
+                        Terminanfrage gesendet!
                       </h3>
 
                       <p className="mb-6 text-lg text-muted-foreground">
-                        Vielen Dank, {formData.name}! Wir haben Ihren Termin für den{' '}
+                        Vielen Dank, {formData.name}! Wir haben Ihre Terminanfrage für den{' '}
                         <strong>{selectedDate && formatFullDate(selectedDate)}</strong> um{' '}
-                        <strong>{selectedTime} Uhr</strong> vorgemerkt.
+                        <strong>{selectedTime} Uhr</strong> erhalten.
                       </p>
 
                       <div className="mb-6 rounded-lg bg-muted p-6 text-left">
-                        <h4 className="mb-3 font-semibold">Was passiert jetzt?</h4>
+                        <h4 className="mb-3 font-semibold">So geht es weiter:</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                            <span>Sie erhalten eine Bestätigungs-E-Mail an <strong>{formData.email}</strong></span>
+                            <span>Wir melden uns innerhalb von 24 Stunden bei Ihnen unter <strong>{formData.phone}</strong></span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                            <span>Wir rufen Sie vorher unter <strong>{formData.phone}</strong> an</span>
+                            <span>Wir bestätigen Ihren Wunschtermin oder schlagen Alternativen vor</span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                            <span>Unser Meister kommt pünktlich zu Ihnen nach <strong>{formData.address}</strong></span>
+                            <span>Unser Meister kommt zu Ihnen nach <strong>{formData.address}</strong></span>
                           </li>
                           <li className="flex items-start">
                             <CheckCircle2 className="mr-2 mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                            <span>Sie erhalten noch am selben Tag ein kostenloses Angebot</span>
+                            <span>Sie erhalten ein kostenloses Festpreis-Angebot</span>
                           </li>
                         </ul>
                       </div>
@@ -445,11 +489,12 @@ export default function AvailabilityChecker() {
                           setStep('calendar');
                           setSelectedDate(null);
                           setSelectedTime(null);
+                          setSubmitError(null);
                           setFormData({ name: '', email: '', phone: '', address: '', message: '' });
                         }}
                         className="rounded-lg border border-border bg-background px-6 py-3 font-semibold transition-all hover:bg-muted"
                       >
-                        Weiteren Termin buchen
+                        Weitere Anfrage senden
                       </button>
                     </CardContent>
                   </Card>

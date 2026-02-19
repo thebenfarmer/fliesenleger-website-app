@@ -11,9 +11,9 @@ const features = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] flex items-center">
+    <section id="hero" className="relative min-h-[calc(100vh-5rem)] flex items-center">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" role="img" aria-label="Modernes Badezimmer mit hochwertigen Fliesen nach Renovierung">
         <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero/hero-badezimmer.jpg)' }} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/60" />
       </div>
@@ -61,25 +61,28 @@ export default function Hero() {
               </Button>
             </Link>
 
-            <a href="tel:+4989123456" className="hidden sm:block">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground">
-                <Phone className="mr-2 h-5 w-5" />
-                089 / 123 456
-              </Button>
-            </a>
+            <div className="flex gap-3 sm:contents">
+              <a href="tel:+4989123456" className="flex-1 sm:flex-none">
+                <Button variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-foreground">
+                  <Phone className="mr-2 h-5 w-5" />
+                  <span className="hidden sm:inline">089 / 123 456</span>
+                  <span className="sm:hidden">Anrufen</span>
+                </Button>
+              </a>
 
-            <a
-              href="https://wa.me/4989123456?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fliesenleger-Leistungen."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:block"
-              title="WhatsApp: Datenübermittlung an Meta/USA. Details in unserer Datenschutzerklärung."
-            >
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp
-              </Button>
-            </a>
+              <a
+                href="https://wa.me/4989123456?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fliesenleger-Leistungen."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none"
+                title="WhatsApp: Datenübermittlung an Meta/USA. Details in unserer Datenschutzerklärung."
+              >
+                <Button variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-foreground">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Stats */}

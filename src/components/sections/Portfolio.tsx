@@ -24,7 +24,7 @@ export default function Portfolio() {
       : projects.filter((p) => p.category === activeCategory).slice(0, 6);
 
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section id="referenzen" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">

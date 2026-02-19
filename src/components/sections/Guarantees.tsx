@@ -24,7 +24,7 @@ const guarantees = [
 
 export default function Guarantees() {
   return (
-    <section className="py-12 md:py-20 bg-primary/5">
+    <section id="garantien" className="py-12 md:py-20 bg-primary/5">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">

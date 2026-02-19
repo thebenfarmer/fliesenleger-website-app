@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Phone, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Button from '@/components/ui/Button';
@@ -17,6 +18,7 @@ const navigation = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +35,7 @@ export default function Header() {
         'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
         isScrolled
           ? 'bg-background/95 backdrop-blur-md shadow-md'
-          : 'bg-transparent'
+          : 'bg-black/20 backdrop-blur-xs'
       )}
     >
       <div className="container mx-auto px-4">
@@ -44,33 +46,53 @@ export default function Header() {
               <span className="text-2xl font-bold text-white">F</span>
             </div>
             <div>
-              <h1 className="text-base sm:text-xl font-bold text-foreground leading-tight">
+              <span className={cn(
+                'text-base sm:text-xl font-bold leading-tight block',
+                isScrolled ? 'text-foreground' : 'text-white'
+              )}>
                 Fliesenleger München
-              </h1>
-              <p className="text-xs text-muted-foreground hidden sm:block">
+              </span>
+              <span className={cn(
+                'text-xs hidden sm:block',
+                isScrolled ? 'text-muted-foreground' : 'text-gray-300'
+              )}>
                 Meisterbetrieb seit 1998
-              </p>
+              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={cn(
+                    'text-sm font-medium transition-colors',
+                    isActive
+                      ? 'text-primary border-b-2 border-primary pb-0.5'
+                      : isScrolled
+                        ? 'text-foreground hover:text-primary'
+                        : 'text-white hover:text-primary'
+                  )}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Buttons */}
           <div className="flex items-center space-x-4">
             <a
               href="tel:+4989123456"
-              className="hidden md:flex items-center space-x-2 text-sm font-medium text-primary hover:text-primary-600 transition-colors"
+              className={cn(
+                'hidden md:flex items-center space-x-2 text-sm font-medium transition-colors',
+                isScrolled ? 'text-primary hover:text-primary-600' : 'text-white hover:text-primary'
+              )}
             >
               <Phone className="h-4 w-4" />
               <span>089 / 123 456</span>
@@ -103,16 +125,25 @@ export default function Header() {
         <div className="lg:hidden border-t border-border bg-background">
           <div className="container mx-auto px-4 py-6">
             <nav className="flex flex-col space-y-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-base font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={cn(
+                      'text-base font-medium transition-colors',
+                      isActive
+                        ? 'text-primary font-semibold'
+                        : 'text-foreground hover:text-primary'
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="mt-6 flex flex-col space-y-3">

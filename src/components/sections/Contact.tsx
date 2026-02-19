@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
 import { Card } from '@/components/ui/Card';
 import AvailabilityIndicator from '@/components/ui/AvailabilityIndicator';
+import { ERROR_MESSAGES } from '@/lib/constants';
+import { contactSchema } from '@/lib/schemas';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,9 +20,28 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
+    setFieldErrors({});
+
+    // Client-side validation
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const errors: Record<string, string> = {};
+      for (const issue of result.error.issues) {
+        const field = issue.path[0]?.toString();
+        if (field && !errors[field]) {
+          errors[field] = issue.message;
+        }
+      }
+      setFieldErrors(errors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -41,9 +62,11 @@ export default function Contact() {
           service: '',
           message: '',
         });
+      } else {
+        setSubmitError(ERROR_MESSAGES.emailSend);
       }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch {
+      setSubmitError(ERROR_MESSAGES.network);
     } finally {
       setIsSubmitting(false);
     }
@@ -59,7 +82,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section id="kontakt" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -103,6 +126,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Max Mustermann"
+                  error={fieldErrors.name}
                 />
 
                 <Input
@@ -113,6 +137,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="max@mustermann.de"
+                  error={fieldErrors.email}
                 />
 
                 <Input
@@ -134,9 +159,11 @@ export default function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="flex h-11 w-full rounded-md border border-input bg-background px-4 py-2.5 text-base focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 transition-colors"
+                    className={`flex h-11 w-full rounded-md border bg-background px-4 py-2.5 text-base focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 transition-colors ${
+                      fieldErrors.service ? 'border-red-500' : 'border-input'
+                    }`}
                   >
-                    <option value="">Bitte wählen...</option>
+                    <option value="" disabled hidden>Bitte wählen...</option>
                     <option value="bodenfliesen">Bodenfliesen</option>
                     <option value="wandfliesen">Wandfliesen</option>
                     <option value="naturstein">Naturstein</option>
@@ -145,6 +172,9 @@ export default function Contact() {
                     <option value="aussenbereich">Außenbereich</option>
                     <option value="beratung">Allgemeine Beratung</option>
                   </select>
+                  {fieldErrors.service && (
+                    <p className="mt-1 text-sm text-red-500">{fieldErrors.service}</p>
+                  )}
                 </div>
 
                 <Textarea
@@ -155,7 +185,20 @@ export default function Contact() {
                   required
                   placeholder="Beschreiben Sie Ihr Projekt..."
                   rows={5}
+                  error={fieldErrors.message}
                 />
+
+                {submitError && (
+                  <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4" role="alert">
+                    <AlertCircle className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
+                    <div>
+                      <p className="text-sm font-medium text-red-800">{submitError}</p>
+                      <p className="mt-1 text-xs text-red-600">
+                        Alternativ erreichen Sie uns telefonisch oder per WhatsApp.
+                      </p>
+                    </div>
+                  </div>
+                )}
 
                 <Button
                   type="submit"

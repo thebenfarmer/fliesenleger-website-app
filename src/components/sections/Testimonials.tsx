@@ -22,7 +22,7 @@ export default function Testimonials() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="py-12 md:py-20 bg-muted/30">
+    <section id="bewertungen" className="py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -52,9 +52,7 @@ export default function Testimonials() {
               bei Google-Bewertungen (Stand: 02/2026)
             </span>
           </div>
-          <p className="mt-2 text-xs text-muted-foreground">
-            Beispielhafte Darstellung. Vor Produktiveinsatz durch echte Kundenstimmen ersetzen.
-          </p>
+          {/* TODO: Vor Go-Live durch echte Kundenstimmen ersetzen */}
         </div>
 
         {/* Testimonial Slider */}
@@ -149,34 +147,43 @@ export default function Testimonials() {
           </div>
 
           {/* Indicators */}
+          {/* NOTE: If auto-advance is added later, implement prefers-reduced-motion check and a visible pause button (WCAG 2.2.2) */}
           <div className="mt-8 flex justify-center gap-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex ? 'w-8 bg-primary' : 'w-2 bg-muted'
+                className={`flex h-11 items-center justify-center rounded-full px-1 transition-all ${
+                  index === currentIndex ? 'w-11' : 'w-11'
                 }`}
                 aria-label={`Gehe zu Bewertung ${index + 1}`}
-              />
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all ${
+                    index === currentIndex ? 'w-8 bg-primary' : 'w-2 bg-muted'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
 
-        {/* Google Reviews Link */}
-        <div className="mt-12 text-center">
-          <a
-            href="https://g.page/r/EXAMPLE/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors"
-          >
-            <span>Alle Bewertungen auf Google ansehen</span>
-            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
-            </svg>
-          </a>
-        </div>
+        {/* TODO: Vor Go-Live echte Google Business URL eintragen */}
+        {process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL && (
+          <div className="mt-12 text-center">
+            <a
+              href={process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary-600 transition-colors"
+            >
+              <span>Alle Bewertungen auf Google ansehen</span>
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

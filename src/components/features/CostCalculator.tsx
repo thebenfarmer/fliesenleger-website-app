@@ -113,7 +113,7 @@ export default function CostCalculator() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">
+    <section id="kostenrechner" className="py-12 md:py-20 bg-gradient-to-br from-primary-50 via-background to-accent-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -190,6 +190,7 @@ export default function CostCalculator() {
                           type="number"
                           step="0.1"
                           min="0"
+                          max="50"
                           value={length}
                           onChange={(e) => setLength(e.target.value)}
                           placeholder="z.B. 4.5"
@@ -205,6 +206,7 @@ export default function CostCalculator() {
                           type="number"
                           step="0.1"
                           min="0"
+                          max="50"
                           value={width}
                           onChange={(e) => setWidth(e.target.value)}
                           placeholder="z.B. 3.2"
@@ -251,6 +253,7 @@ export default function CostCalculator() {
                           type="number"
                           step="0.1"
                           min="0"
+                          max="10"
                           value={height}
                           onChange={(e) => setHeight(e.target.value)}
                           placeholder="z.B. 2.4"
@@ -285,12 +288,21 @@ export default function CostCalculator() {
                     transition={{ duration: 0.4 }}
                     className="space-y-6"
                   >
+                    {/* Warning for extreme values */}
+                    {totalArea > 200 && (
+                      <div className="rounded-lg border border-amber-300 bg-amber-50 p-4">
+                        <p className="text-sm text-amber-800">
+                          <strong>Hinweis:</strong> Bei Flächen über 200 m² empfehlen wir eine individuelle Beratung für eine genauere Kalkulation.
+                        </p>
+                      </div>
+                    )}
+
                     {/* Summary Card */}
                     <Card variant="elevated" padding="lg" className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
                       <CardContent>
                         <div className="space-y-4">
                           <div>
-                            <p className="text-sm font-medium text-white/90">Geschätzte Gesamtkosten</p>
+                            <p className="text-sm font-medium text-white/90">Geschätzte Gesamtkosten (inkl. MwSt.)</p>
                             <motion.p
                               key={`${totalCostMin}-${totalCostMax}`}
                               initial={{ scale: 0.8, opacity: 0 }}

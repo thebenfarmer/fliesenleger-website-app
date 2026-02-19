@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Palette, Download, Share2, RotateCcw, ArrowRight, Check } from 'lucide-react';
+import { Palette, Share2, RotateCcw, ArrowRight, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
@@ -121,23 +121,22 @@ export default function TileConfigurator() {
     setGroutColor('grey');
   };
 
+  const getConfigSummary = () => {
+    return `Mein Fliesen-Design: ${selectedRoom.name} – Wand: ${selectedWallTile.name} (${selectedWallTile.price}), Boden: ${selectedFloorTile.name} (${selectedFloorTile.price}), Fuge: ${groutColors.find(g => g.id === groutColor)?.name}`;
+  };
+
   const handleShare = () => {
     setShowShareModal(true);
   };
 
-  const handleDownload = () => {
-    // Simuliere Download
-    alert('Screenshot wird heruntergeladen... (Demo-Funktion)');
-  };
-
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-accent-50 via-background to-primary-50">
+    <section id="konfigurator" className="py-12 md:py-20 bg-gradient-to-br from-accent-50 via-background to-primary-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-12 text-center">
           <Badge variant="primary" size="md" className="mb-4">
             <Palette className="mr-2 h-4 w-4" />
-            Design Studio
+            <span lang="en">Design Studio</span>
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
             Welcher Stil passt zu Ihnen? Probieren Sie es aus.
@@ -225,13 +224,6 @@ export default function TileConfigurator() {
                         <RotateCcw className="h-5 w-5 text-foreground" />
                       </button>
                       <button
-                        onClick={handleDownload}
-                        className="rounded-lg bg-white/90 p-2 backdrop-blur-xs transition-all hover:bg-white hover:shadow-lg"
-                        title="Screenshot herunterladen"
-                      >
-                        <Download className="h-5 w-5 text-foreground" />
-                      </button>
-                      <button
                         onClick={handleShare}
                         className="rounded-lg bg-white/90 p-2 backdrop-blur-xs transition-all hover:bg-white hover:shadow-lg"
                         title="Design teilen"
@@ -240,6 +232,11 @@ export default function TileConfigurator() {
                       </button>
                     </div>
                   </div>
+
+                  {/* Disclaimer */}
+                  <p className="px-6 pt-4 text-xs text-muted-foreground">
+                    Vereinfachte Darstellung – echte Materialien und Muster weichen ab.
+                  </p>
 
                   {/* Summary */}
                   <div className="grid gap-4 p-6 md:grid-cols-3">
@@ -414,14 +411,30 @@ export default function TileConfigurator() {
                       Teilen Sie Ihr Design mit Familie, Freunden oder direkt mit uns für ein Angebot!
                     </p>
                     <div className="space-y-3">
-                      <button className="w-full rounded-lg border border-border bg-background p-3 text-left font-semibold transition-all hover:bg-muted">
+                      <a
+                        href={`mailto:?subject=Mein%20Fliesen-Design&body=${encodeURIComponent(getConfigSummary())}`}
+                        className="block w-full rounded-lg border border-border bg-background p-3 text-left font-semibold transition-all hover:bg-muted"
+                        onClick={() => setShowShareModal(false)}
+                      >
                         📧 Per E-Mail teilen
-                      </button>
-                      <button className="w-full rounded-lg border border-border bg-background p-3 text-left font-semibold transition-all hover:bg-muted">
+                      </a>
+                      <a
+                        href={`https://wa.me/?text=${encodeURIComponent(getConfigSummary())}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full rounded-lg border border-border bg-background p-3 text-left font-semibold transition-all hover:bg-muted"
+                        onClick={() => setShowShareModal(false)}
+                      >
                         💬 WhatsApp
-                      </button>
-                      <button className="w-full rounded-lg border border-border bg-background p-3 text-left font-semibold transition-all hover:bg-muted">
-                        📱 SMS
+                      </a>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText(getConfigSummary());
+                          setShowShareModal(false);
+                        }}
+                        className="w-full rounded-lg border border-border bg-background p-3 text-left font-semibold transition-all hover:bg-muted"
+                      >
+                        📋 In Zwischenablage kopieren
                       </button>
                       <button
                         onClick={() => setShowShareModal(false)}
