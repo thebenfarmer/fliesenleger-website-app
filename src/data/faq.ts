@@ -1,6 +1,6 @@
 export interface FAQ {
   id: string;
-  category: 'allgemein' | 'kosten' | 'material' | 'ablauf' | 'pflege';
+  category: 'kosten' | 'ablauf' | 'garantie' | 'allgemein';
   question: string;
   answer: string;
 }
@@ -8,93 +8,51 @@ export interface FAQ {
 export const faqs: FAQ[] = [
   {
     id: 'faq-01',
-    category: 'allgemein',
-    question: 'Wie lange dauert eine typische Badezimmer-Sanierung?',
-    answer: 'Eine Standard-Badezimmer-Sanierung dauert in der Regel 5-7 Werktage. Dies umfasst die Demontage alter Fliesen, Untergrundvorbereitung, Verlegung neuer Fliesen und Verfugung. Bei größeren Bädern oder komplexen Arbeiten kann es auch 10-14 Tage dauern. Wir erstellen für jedes Projekt einen detaillierten Zeitplan.',
+    category: 'kosten',
+    question: 'Was kostet eine Badsanierung in München?',
+    answer: 'Ein Standard-Bad (6-8 m²) kostet zwischen 15.000 und 25.000 € inkl. MwSt. -- inklusive aller Materialien und Arbeiten. Premium-Bäder mit Naturstein beginnen ab 25.000 € inkl. MwSt. Bei uns erhalten Sie nach der kostenlosen Vor-Ort-Beratung einen verbindlichen Festpreis. Dieser Festpreis ist Ihr Endpreis -- garantiert, ohne Nachforderungen. Nutzen Sie unseren Badsanierungs-Rechner für eine erste Schätzung.',
   },
   {
     id: 'faq-02',
-    category: 'kosten',
-    question: 'Was kostet die Fliesenverlegung pro Quadratmeter?',
-    answer: 'Die Kosten variieren je nach Material und Aufwand: Einfache Keramikfliesen ab 35€/m², Feinsteinzeug ab 45€/m², Naturstein ab 85€/m² und Mosaik ab 65€/m². Diese Preise beinhalten Material und Verlegung. Für ein genaues Angebot erstellen wir Ihnen gerne einen kostenlosen Kostenvoranschlag.',
+    category: 'ablauf',
+    question: 'Wie lange dauert eine Badsanierung?',
+    answer: 'Ein Standard-Bad sanieren wir in 5-7 Werktagen. Größere Projekte mit Naturstein oder Sonderanfertigungen dauern 10-14 Tage. Den exakten Zeitplan erhalten Sie vor Projektstart schriftlich -- und er wird eingehalten. Das bestätigen über 500 abgeschlossene Projekte. Wir arbeiten mit einem festen Team, das sich kennt und aufeinander abgestimmt ist.',
   },
   {
     id: 'faq-03',
     category: 'kosten',
-    question: 'Sind die Preise inklusive Material?',
-    answer: 'Ja, unsere Preisangaben verstehen sich inklusive Material. Wir bieten Ihnen verschiedene Materialoptionen in unterschiedlichen Preisklassen an. Bei der Beratung zeigen wir Ihnen Muster und besprechen mit Ihnen die Vor- und Nachteile der jeweiligen Materialien.',
+    question: 'Was ist im Festpreis enthalten?',
+    answer: 'Alles. Materialien, Verlegung, Untergrundvorbereitung, Verfugung, Silikonarbeiten und Endreinigung. Es gibt keine versteckten Positionen, keine Nachträge und keine bösen Überraschungen. Der Festpreis ist der Endpreis für den im Angebot definierten Leistungsumfang -- das ist Teil unseres Dreifach-Garantie-Systems.',
   },
   {
     id: 'faq-04',
-    category: 'material',
-    question: 'Welches Material eignet sich am besten für den Außenbereich?',
-    answer: 'Für Außenbereiche empfehlen wir frostbeständiges Feinsteinzeug mit rutschfester Oberfläche (mindestens R11). Besonders beliebt sind Fliesen in Holzoptik oder Natursteinoptik. Diese sind pflegeleicht, langlebig und optisch ansprechend. Wichtig ist auch ein Gefälle für den Wasserablauf.',
+    category: 'garantie',
+    question: 'Was passiert bei unvorhergesehenen Problemen während der Arbeiten?',
+    answer: 'Bei anderen Betrieben heißt es dann oft: Aufpreis. Bei uns nicht. Unsere Festpreis-Garantie bedeutet: Wenn wir während der Arbeiten auf ein unvorhergesehenes Problem stoßen -- zum Beispiel einen beschädigten Untergrund oder eine defekte Abdichtung -- tragen wir die Mehrkosten. Nicht Sie. Wir informieren Sie transparent über das Problem und die Lösung, aber Ihr Preis bleibt Ihr Preis.',
   },
   {
     id: 'faq-05',
-    category: 'material',
-    question: 'Sind Großformatfliesen für jeden Raum geeignet?',
-    answer: 'Großformatfliesen (ab 60x120cm) eignen sich besonders für große, offene Räume. Sie schaffen eine moderne, großzügige Optik mit wenigen Fugen. Für sehr kleine Räume oder verwinkelte Bereiche sind sie weniger geeignet, da der Verschnitt höher ist. Wir beraten Sie gerne zur optimalen Fliesengröße für Ihren Raum.',
+    category: 'ablauf',
+    question: 'Wird die Baustelle sauber gehalten?',
+    answer: 'Ja, das ist uns wichtig. Wir arbeiten mit Staubschutzwänden, räumen jeden Abend auf und übergeben am Ende eine saubere Baustelle -- inklusive Endreinigung. Ihr Zuhause bleibt während der Arbeiten bewohnbar. Das ist einer der häufigsten Gründe, warum uns Kunden weiterempfehlen.',
   },
   {
     id: 'faq-06',
-    category: 'ablauf',
-    question: 'Muss ich vor der Verlegung etwas vorbereiten?',
-    answer: 'Idealerweise sollten die Räume leer geräumt sein. Sanitärobjekte wie Toilette oder Waschbecken demontieren wir auf Wunsch. Der Untergrund sollte tragfähig und eben sein – eventuelle Ausbesserungen führen wir durch. Wir besprechen alle Vorbereitungen bei der Vor-Ort-Besichtigung.',
+    category: 'garantie',
+    question: 'Warum 5 Jahre Garantie und nicht nur 2?',
+    answer: 'Gesetzlich vorgeschrieben sind 2 Jahre Gewährleistung bei Bauleistungen. Wir geben 5 -- weil wir wissen, dass unsere Arbeit länger hält als jede gesetzliche Frist. Seit 1998 arbeiten wir mit dem gleichen Anspruch an jedes Projekt. Die 5-Jahre-Vollgarantie auf Material und Arbeit geht deutlich über die gesetzliche Gewährleistung hinaus.',
   },
   {
     id: 'faq-07',
-    category: 'ablauf',
-    question: 'Wie läuft ein Projekt typischerweise ab?',
-    answer: 'Nach Ihrer Anfrage vereinbaren wir einen kostenlosen Beratungstermin vor Ort. Wir besprechen Ihre Wünsche, nehmen Maß und zeigen Ihnen Materialproben. Anschließend erhalten Sie einen detaillierten Kostenvoranschlag. Nach Auftragserteilung planen wir den Termin und führen die Arbeiten zügig und sauber aus.',
+    category: 'allgemein',
+    question: 'Arbeiten Sie mit Subunternehmern?',
+    answer: 'Nein. Unser Team besteht aus einem Meister und fünf festangestellten Gesellen -- einige davon seit über 10 Jahren bei uns. Die gleichen Hände, die Ihr Projekt planen, führen es auch aus. Keine Leiharbeiter, keine wechselnden Gesichter. Das ist entscheidend für gleichbleibende Ergebnisse und dafür, dass wir guten Gewissens 5 Jahre Garantie geben können.',
   },
   {
     id: 'faq-08',
     category: 'ablauf',
-    question: 'Kann ich während der Arbeiten im Haus bleiben?',
-    answer: 'Ja, das ist in der Regel kein Problem. Wir arbeiten sauber und schützen angrenzende Bereiche mit Folien und Staubschutzwänden. Bei Badezimmer-Sanierungen sollten Sie berücksichtigen, dass das Bad für die Dauer der Arbeiten nicht nutzbar ist. Bei größeren Projekten besprechen wir einen etappenweisen Ablauf.',
-  },
-  {
-    id: 'faq-09',
-    category: 'pflege',
-    question: 'Wie pflege ich meine neuen Fliesen richtig?',
-    answer: 'Die meisten Fliesen sind sehr pflegeleicht. Für die Reinigung genügt warmes Wasser mit mildem Reiniger. Bei Naturstein sollten Sie säurehaltige Reiniger vermeiden. Wir geben Ihnen nach Abschluss der Arbeiten detaillierte Pflegehinweise für Ihr spezifisches Material.',
-  },
-  {
-    id: 'faq-10',
-    category: 'pflege',
-    question: 'Wie oft müssen Fugen erneuert werden?',
-    answer: 'Hochwertig verlegte Fugen halten bei normaler Beanspruchung 15-20 Jahre. In Nassbereichen sollten Silikonfugen alle 5-10 Jahre erneuert werden. Wir verwenden ausschließlich hochwertige Fugenmaterialien und imprägnieren diese auf Wunsch für extra Schutz.',
-  },
-  {
-    id: 'faq-11',
-    category: 'allgemein',
-    question: 'Bieten Sie auch eine Garantie auf Ihre Arbeiten?',
-    answer: 'Ja, wir bieten 5 Jahre Garantie auf alle unsere Fliesenarbeiten. Als Meisterbetrieb garantieren wir für fachgerechte Ausführung nach den neuesten technischen Richtlinien. Bei Materialfehlern gelten die jeweiligen Herstellergarantien.',
-  },
-  {
-    id: 'faq-12',
-    category: 'kosten',
-    question: 'Gibt es versteckte Kosten?',
-    answer: 'Nein, unser Kostenvoranschlag ist transparent und detailliert. Alle Positionen werden klar aufgeschlüsselt. Sollten während der Arbeiten unvorhergesehene Zusatzarbeiten nötig sein (z.B. Untergrundarbeiten), besprechen wir diese vorab mit Ihnen und holen Ihre Zustimmung ein.',
-  },
-  {
-    id: 'faq-13',
-    category: 'material',
-    question: 'Was ist der Unterschied zwischen Keramik und Feinsteinzeug?',
-    answer: 'Feinsteinzeug wird bei höheren Temperaturen gebrannt und ist dadurch härter, dichter und wasserabweisender als Keramik. Es eignet sich daher besser für Außenbereiche und stark beanspruchte Flächen. Keramikfliesen sind günstiger und für normale Wohnbereiche völlig ausreichend.',
-  },
-  {
-    id: 'faq-14',
-    category: 'allgemein',
-    question: 'Arbeiten Sie auch am Wochenende?',
-    answer: 'In der Regel arbeiten wir Montag bis Freitag. Für dringende Projekte oder auf besonderen Wunsch sind auch Wochenendtermine möglich. Dies besprechen wir individuell bei der Terminplanung.',
-  },
-  {
-    id: 'faq-15',
-    category: 'ablauf',
-    question: 'Wie weit im Voraus muss ich einen Termin buchen?',
-    answer: 'Unsere durchschnittliche Vorlaufzeit beträgt 3-6 Wochen. In dringenden Fällen können wir oft auch kurzfristigere Termine ermöglichen. Kontaktieren Sie uns einfach – wir finden eine Lösung!',
+    question: 'Wie schnell können Sie starten?',
+    answer: 'Unsere aktuelle Vorlaufzeit beträgt ca. 3 Wochen. Als Meisterbetrieb betreuen wir bewusst nur 2-3 Projekte gleichzeitig -- damit Ihr Projekt die volle Aufmerksamkeit bekommt. In der Hochsaison (März bis September) kann die Wartezeit länger sein. Unser Tipp: Fragen Sie jetzt an, um Ihren Wunschtermin zu sichern. Die Beratung ist kostenlos und unverbindlich.',
   },
 ];
 
@@ -107,9 +65,8 @@ export const getFAQsByCategory = (category: FAQ['category']): FAQ[] => {
 };
 
 export const categories = [
-  { id: 'allgemein', name: 'Allgemein', count: faqs.filter(f => f.category === 'allgemein').length },
   { id: 'kosten', name: 'Kosten & Preise', count: faqs.filter(f => f.category === 'kosten').length },
-  { id: 'material', name: 'Materialien', count: faqs.filter(f => f.category === 'material').length },
   { id: 'ablauf', name: 'Ablauf', count: faqs.filter(f => f.category === 'ablauf').length },
-  { id: 'pflege', name: 'Pflege', count: faqs.filter(f => f.category === 'pflege').length },
+  { id: 'garantie', name: 'Garantie', count: faqs.filter(f => f.category === 'garantie').length },
+  { id: 'allgemein', name: 'Allgemein', count: faqs.filter(f => f.category === 'allgemein').length },
 ];

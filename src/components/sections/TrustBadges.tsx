@@ -9,23 +9,23 @@ interface TrustBadge {
 const badges: TrustBadge[] = [
   {
     icon: <Award className="h-8 w-8 text-primary" />,
-    text: 'Meisterbetrieb',
-    subtext: 'Seit 1998',
+    text: 'Seit 1998',
+    subtext: 'Meisterbetrieb in München',
   },
   {
     icon: <Star className="h-8 w-8 text-primary" />,
-    text: '4.9/5.0',
-    subtext: '182 Google-Bewertungen',
+    text: '4.9 / 5.0',
+    subtext: 'Google-Bewertung (Stand: 02/2026)',
   },
   {
     icon: <Shield className="h-8 w-8 text-primary" />,
-    text: '5 Jahre Garantie',
-    subtext: 'Auf alle Arbeiten',
+    text: '5 Jahre',
+    subtext: 'Vollgarantie auf Material & Arbeit',
   },
   {
     icon: <Users className="h-8 w-8 text-primary" />,
-    text: '1.200+',
-    subtext: 'Zufriedene Kunden',
+    text: '500+',
+    subtext: 'Abgeschlossene Projekte',
   },
 ];
 

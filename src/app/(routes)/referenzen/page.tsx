@@ -32,11 +32,11 @@ export default function ReferenzenPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-                Unsere Referenzen
+                Über 500 Projekte in München. Hier sind einige davon.
               </h1>
               <p className="text-lg text-primary-100">
-                Überzeugen Sie sich von unserer Arbeit. Hier sehen Sie eine Auswahl
-                unserer erfolgreich abgeschlossenen Projekte aus München und Umgebung.
+                Vorher/Nachher: Echte Projekte, echte Kunden, echte Ergebnisse.
+                Von Schwabing bis Grünwald.
               </p>
             </div>
           </div>
@@ -55,8 +55,8 @@ export default function ReferenzenPage() {
                 <div className="text-sm text-muted-foreground">Jahre Erfahrung</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Zufriedenheit</div>
+                <div className="text-4xl font-bold text-primary">4.9</div>
+                <div className="text-sm text-muted-foreground">Google-Bewertung</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-primary">5</div>
@@ -169,12 +169,12 @@ export default function ReferenzenPage() {
                   Ihr Projekt könnte das nächste sein
                 </h2>
                 <p className="mb-6 text-muted-foreground">
-                  Lassen Sie uns gemeinsam Ihr Traumprojekt verwirklichen. Kontaktieren
-                  Sie uns für ein unverbindliches Beratungsgespräch.
+                  Kostenlose Beratung. Verbindlicher Festpreis in 48 Stunden.
+                  Dreifach-Garantie auf jedes Projekt.
                 </p>
                 <Link href="/kontakt">
                   <Button variant="primary" size="lg">
-                    Projekt anfragen
+                    Ihr Projekt könnte das nächste sein -- jetzt anfragen
                   </Button>
                 </Link>
               </div>

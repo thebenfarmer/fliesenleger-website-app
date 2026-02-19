@@ -34,7 +34,7 @@
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.10",
     "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "typescript": "5.9.3"
   },
   "optionalDependencies": {
     "@next/swc-darwin-arm64": "^16.0.10"

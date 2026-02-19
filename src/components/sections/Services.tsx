@@ -25,50 +25,50 @@ const services: Service[] = [
   {
     id: 'bodenfliesen',
     title: 'Bodenfliesen',
-    description: 'Professionelle Verlegung von Bodenfliesen für Wohn- und Gewerbebereiche.',
+    description: 'Bodenfliesen die 20 Jahre halten -- für Wohnräume, die Eindruck machen.',
     icon: 'Grid3x3',
     image: '/images/services/bodenfliesen.jpg',
-    priceRange: 'ab 45€/m²',
+    priceRange: 'ab 45 €/m² inkl. MwSt.',
   },
   {
     id: 'wandfliesen',
     title: 'Wandfliesen',
-    description: 'Fachgerechte Wandfliesenverlegung für Bad, Küche und alle Wohnbereiche.',
+    description: 'Wandfliesen die jeden Morgen gut aussehen -- präzise verlegt, fugenperfekt.',
     icon: 'Square',
     image: '/images/services/wandfliesen.jpg',
-    priceRange: 'ab 38€/m²',
+    priceRange: 'ab 38 €/m² inkl. MwSt.',
   },
   {
     id: 'naturstein',
     title: 'Naturstein',
-    description: 'Edle Natursteinverlegung von Marmor, Granit und Schiefer.',
+    description: 'Marmor, Granit, Schiefer -- millimetergenau verlegt für zeitlose Eleganz.',
     icon: 'Gem',
     image: '/images/services/naturstein.jpg',
-    priceRange: 'ab 85€/m²',
+    priceRange: 'ab 85 €/m² inkl. MwSt.',
   },
   {
     id: 'mosaik',
     title: 'Mosaik',
-    description: 'Kunstvolle Mosaikverlegung für individuelle Akzente.',
+    description: 'Handverlesene Mosaikkunst -- der Akzent, der Ihr Bad einzigartig macht.',
     icon: 'Sparkles',
     image: '/images/services/mosaik.jpg',
-    priceRange: 'ab 65€/m²',
+    priceRange: 'ab 65 €/m² inkl. MwSt.',
   },
   {
     id: 'badezimmer',
     title: 'Badezimmer',
-    description: 'Komplette Badsanierung vom Fachbetrieb – alles aus einer Hand.',
+    description: 'Komplett-Sanierung in 5-7 Tagen. Ein Ansprechpartner. Null Stress für Sie.',
     icon: 'Bath',
     image: '/images/services/badezimmer.jpg',
-    priceRange: 'Auf Anfrage',
+    priceRange: 'ab 15.000 € inkl. MwSt.',
   },
   {
     id: 'aussenbereich',
     title: 'Außenbereich',
-    description: 'Wetterfeste Fliesenverlegung für Terrasse, Balkon und mehr.',
+    description: 'Frostfeste Terrassen und Balkone -- einmal verlegt, jahrelang genossen.',
     icon: 'TreePine',
     image: '/images/services/aussenbereich.jpg',
-    priceRange: 'ab 52€/m²',
+    priceRange: 'ab 52 €/m² inkl. MwSt.',
   },
 ];
 
@@ -79,14 +79,14 @@ export default function Services() {
         {/* Section Header */}
         <div className="mb-12 text-center">
           <Badge variant="primary" size="md" className="mb-4">
-            Unsere Leistungen
+            Leistungen
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Professionelle Fliesenverlegung
+            Vom Gäste-WC bis zur Villa -- für jedes Projekt die richtige Lösung
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Mit über 25 Jahren Erfahrung bieten wir Ihnen höchste Qualität in allen
-            Bereichen der Fliesenverlegung.
+            Transparente ab-Preise inkl. MwSt. Festpreis-Angebot nach kostenloser Beratung.
+            Das Dreifach-Garantie-System gilt für jede Leistung.
           </p>
         </div>
 
@@ -134,7 +134,7 @@ export default function Services() {
                         {service.priceRange}
                       </span>
                       <span className="text-sm text-muted-foreground">
-                        Mehr erfahren →
+                        Details ansehen
                       </span>
                     </div>
                   </CardContent>
@@ -150,7 +150,7 @@ export default function Services() {
             href="/leistungen"
             className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors"
           >
-            Alle Leistungen ansehen
+            Alle Leistungen mit Festpreis-Garantie ansehen
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

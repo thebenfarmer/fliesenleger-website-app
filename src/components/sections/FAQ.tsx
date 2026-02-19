@@ -7,29 +7,29 @@ import Badge from '@/components/ui/Badge';
 
 const faqs = [
   {
-    question: 'Wie lange dauert eine Badezimmer-Renovierung?',
+    question: 'Was kostet eine Badsanierung in München?',
     answer:
-      'Eine Standard-Badezimmer-Renovierung dauert in der Regel 5-7 Werktage. Dies umfasst die Demontage alter Fliesen, Untergrundvorbereitung, Verlegung neuer Fliesen und Verfugung.',
+      'Ein Standard-Bad (6-8 m²) kostet zwischen 15.000 und 25.000 € inkl. MwSt. -- inklusive aller Materialien und Arbeiten. Premium-Bäder mit Naturstein beginnen ab 25.000 € inkl. MwSt. Bei uns erhalten Sie nach der kostenlosen Vor-Ort-Beratung einen verbindlichen Festpreis. Dieser Festpreis ist Ihr Endpreis -- garantiert, ohne Nachforderungen.',
   },
   {
-    question: 'Was kostet die Fliesenverlegung pro Quadratmeter?',
+    question: 'Wie lange dauert eine Badsanierung?',
     answer:
-      'Die Kosten variieren je nach Material und Aufwand: Einfache Keramikfliesen ab 35€/m², Feinsteinzeug ab 45€/m², Naturstein ab 85€/m². Alle Preise inkl. Material und Verlegung.',
+      'Ein Standard-Bad sanieren wir in 5-7 Werktagen. Größere Projekte mit Naturstein oder Sonderanfertigungen dauern 10-14 Tage. Den exakten Zeitplan erhalten Sie vor Projektstart schriftlich -- und er wird eingehalten.',
   },
   {
-    question: 'Bieten Sie auch kostenlose Beratung an?',
+    question: 'Was ist im Festpreis enthalten?',
     answer:
-      'Ja, wir bieten eine kostenlose und unverbindliche Beratung bei Ihnen vor Ort an. Dabei nehmen wir Maß, besprechen Ihre Wünsche und zeigen Ihnen Materialproben.',
+      'Alles. Materialien, Verlegung, Untergrundvorbereitung, Verfugung, Silikonarbeiten und Endreinigung. Es gibt keine versteckten Positionen, keine Nachträge und keine bösen Überraschungen. Der Festpreis ist der Endpreis für den im Angebot definierten Leistungsumfang.',
   },
   {
-    question: 'Welche Garantie bieten Sie auf Ihre Arbeiten?',
+    question: 'Was ist das Dreifach-Garantie-System?',
     answer:
-      'Wir bieten 5 Jahre Garantie auf alle unsere Fliesenarbeiten. Als Meisterbetrieb garantieren wir für fachgerechte Ausführung nach den neuesten technischen Richtlinien.',
+      'Unser Dreifach-Garantie-System besteht aus drei Bausteinen: 1. Festpreis-Garantie (Angebotspreis = Endpreis), 2. 30-Tage-Zufriedenheitsgarantie (kostenlose Nachbesserung), 3. 5-Jahre-Vollgarantie auf Material und Arbeit. Diese Kombination bieten nur wenige Fliesenleger in München.',
   },
   {
-    question: 'Wie weit im Voraus muss ich einen Termin buchen?',
+    question: 'Arbeiten Sie mit Subunternehmern?',
     answer:
-      'Unsere durchschnittliche Vorlaufzeit beträgt 3-6 Wochen. In dringenden Fällen können wir oft auch kurzfristigere Termine ermöglichen.',
+      'Nein. Unser Team besteht aus einem Meister und fünf festangestellten Gesellen -- einige davon seit über 10 Jahren bei uns. Die gleichen Hände, die Ihr Projekt planen, führen es auch aus.',
   },
 ];
 
@@ -49,11 +49,11 @@ export default function FAQ() {
             Häufige Fragen
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Häufig gestellte Fragen
+            Häufige Fragen -- ehrlich beantwortet
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Die wichtigsten Fragen zu unseren Leistungen, Preisen und Abläufen –
-            schnell beantwortet.
+            Preise, Zeitrahmen, Garantien, Ablauf -- die wichtigsten Antworten
+            auf einen Blick.
           </p>
         </div>
 
@@ -98,14 +98,14 @@ export default function FAQ() {
         {/* CTA */}
         <div className="mt-12 text-center">
           <p className="mb-4 text-muted-foreground">
-            Haben Sie weitere Fragen? Wir helfen Ihnen gerne weiter.
+            Haben Sie weitere Fragen? Wir beantworten sie gerne persönlich.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/kontakt"
               className="inline-flex items-center rounded-md bg-primary px-6 py-2.5 text-white transition-colors hover:bg-primary-600"
             >
-              Kontakt aufnehmen
+              Noch Fragen? Antwort in 24 Stunden
             </Link>
             <a
               href="tel:+4989123456"

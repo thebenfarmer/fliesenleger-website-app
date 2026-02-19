@@ -3,10 +3,10 @@ import { ArrowRight, CheckCircle, Phone, MessageCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
 const features = [
-  'Kostenlose Beratung',
-  '5 Jahre Garantie',
-  'Meisterbetrieb',
-  'Über 25 Jahre Erfahrung',
+  'Angebotspreis = Endpreis',
+  '5 Jahre Vollgarantie',
+  'Meisterbetrieb seit 1998',
+  'Standard-Bad in 5-7 Tagen',
 ];
 
 export default function Hero() {
@@ -24,21 +24,21 @@ export default function Hero() {
           {/* Badge */}
           <div className="mb-4 sm:mb-6 inline-flex items-center rounded-full bg-primary/20 px-4 py-2 backdrop-blur-xs">
             <span className="text-sm font-medium text-white">
-              🏆 Meisterbetrieb seit 1998
+              Meisterbetrieb seit 1998 | München
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="mb-4 sm:mb-6 text-3xl font-bold text-white md:text-5xl lg:text-6xl">
-            Ihr Fliesenleger-Meisterbetrieb
-            <br />
-            <span className="text-primary">in München</span>
+            500+ Münchner Familien vertrauen unserem{' '}
+            <span className="text-primary">Dreifach-Garantie-System</span>
           </h1>
 
           {/* Description */}
           <p className="mb-8 text-lg text-gray-200 md:text-xl">
-            Professionelle Fliesenverlegung für Badezimmer, Naturstein und mehr.
-            Hochwertige Handwerkskunst mit über 25 Jahren Erfahrung.
+            Festpreis-Garantie. 30-Tage-Zufriedenheitsgarantie. 5-Jahre-Vollgarantie
+            auf Material und Arbeit. Meisterhafte Fliesenverlegung und Badsanierung
+            -- ohne Risiko für Sie.
           </p>
 
           {/* Features */}
@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link href="/kontakt" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="group w-full sm:w-auto">
-                Kostenlos anfragen
+                Kostenloses Festpreis-Angebot anfordern
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
@@ -72,6 +72,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:block"
+              title="WhatsApp: Datenübermittlung an Meta/USA. Details in unserer Datenschutzerklärung."
             >
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground">
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -88,11 +89,11 @@ export default function Hero() {
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-bold text-white">500+</div>
-              <div className="text-xs sm:text-sm text-gray-300">Projekte</div>
+              <div className="text-xs sm:text-sm text-gray-300">Projekte in München</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">5</div>
-              <div className="text-xs sm:text-sm text-gray-300">Jahre Garantie</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">4.9</div>
+              <div className="text-xs sm:text-sm text-gray-300">Google-Bewertung</div>
             </div>
           </div>
         </div>

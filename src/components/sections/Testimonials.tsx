@@ -30,7 +30,7 @@ export default function Testimonials() {
             Kundenstimmen
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Das sagen unsere Kunden
+            Warum Münchner Familien uns weiterempfehlen
           </h2>
           <div className="mx-auto flex items-center justify-center gap-2">
             <div className="flex">
@@ -49,9 +49,12 @@ export default function Testimonials() {
               {averageRating.toFixed(1)} von 5.0
             </span>
             <span className="text-muted-foreground">
-              ({testimonials.length} Bewertungen)
+              bei Google-Bewertungen (Stand: 02/2026)
             </span>
           </div>
+          <p className="mt-2 text-xs text-muted-foreground">
+            Beispielhafte Darstellung. Vor Produktiveinsatz durch echte Kundenstimmen ersetzen.
+          </p>
         </div>
 
         {/* Testimonial Slider */}

@@ -715,18 +715,18 @@ export default function BathroomRenovationCalculator() {
                 <CardContent>
                   <div className="text-center">
                     <h3 className="mb-2 text-xl font-semibold text-white">
-                      Jetzt kostenloses Angebot anfordern
+                      Das ist eine Schätzung. Ihren verbindlichen Festpreis gibt es in 48 Stunden.
                     </h3>
                     <p className="mb-6 text-sm text-primary-100">
-                      Unsere Experten erstellen Ihnen ein detailliertes, kostenloses Angebot mit Vor-Ort-Beratung.
-                      Innerhalb von 24 Stunden erhalten Sie eine persönliche Rückmeldung.
+                      Kostenlose Vor-Ort-Beratung. Festpreis-Angebot ohne Nachforderungen.
+                      Dreifach-Garantie auf jedes Projekt.
                     </p>
                     <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                       <a
                         href="#contact"
                         className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-primary shadow-lg transition-all hover:bg-primary-50 hover:shadow-xl"
                       >
-                        Kostenloses Angebot erhalten
+                        Verbindlichen Festpreis erhalten -- in 48 Stunden
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </a>
                       <button
@@ -747,7 +747,7 @@ export default function BathroomRenovationCalculator() {
                       </span>
                       <span className="flex items-center">
                         <CheckCircle2 className="mr-1 h-4 w-4 text-white" />
-                        Meisterbetrieb seit 25 Jahren
+                        Dreifach-Garantie-System
                       </span>
                     </div>
                   </div>
@@ -780,10 +780,10 @@ export default function BathroomRenovationCalculator() {
               Bad-Renovierungsrechner
             </Badge>
             <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-              Planen Sie Ihre Badsanierung
+              Was kostet Ihre Badsanierung? In 6 Schritten zur Schätzung.
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              In 6 einfachen Schritten zu Ihrer Kostenschätzung
+              Unverbindliche Orientierung. Den verbindlichen Festpreis erhalten Sie nach der kostenlosen Beratung.
             </p>
           </div>
 

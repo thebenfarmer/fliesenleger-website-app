@@ -32,11 +32,11 @@ export default function Portfolio() {
             Referenzen
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Unsere Projekte
+            Projekte aus Schwabing, Bogenhausen und ganz München
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Überzeugen Sie sich von unserer Arbeit. Sehen Sie selbst die
-            beeindruckende Transformation durch professionelle Fliesenverlegung.
+            Vorher/Nachher: So verwandeln wir Münchner Bäder und Wohnräume.
+            Jedes Projekt mit Festpreis-Garantie.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function Portfolio() {
             href="/referenzen"
             className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors"
           >
-            Alle Referenzen ansehen
+            Ihr Projekt könnte das nächste sein -- jetzt anfragen
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

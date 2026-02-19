@@ -5,9 +5,9 @@ import StickyContactBar from '@/components/layout/StickyContactBar';
 import Contact from '@/components/sections/Contact';
 
 export const metadata: Metadata = {
-  title: 'Kontakt',
+  title: 'Fliesenleger München kontaktieren | Kostenlose Beratung | Festpreis in 48h',
   description:
-    'Kontaktieren Sie uns für ein kostenloses Beratungsgespräch. Fliesenleger-Meisterbetrieb in München mit über 25 Jahren Erfahrung.',
+    'Kostenlose Beratung vom Münchner Fliesenleger-Meisterbetrieb. Festpreis-Angebot in 48 Stunden. Dreifach-Garantie. Antwort innerhalb von 24h. Jetzt unverbindlich anfragen.',
 };
 
 export default function KontaktPage() {
@@ -20,12 +20,11 @@ export default function KontaktPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-                Kontakt aufnehmen
+                In 48 Stunden wissen Sie, was Ihr Traumprojekt kostet
               </h1>
               <p className="text-lg text-primary-100">
-                Wir freuen uns auf Ihre Anfrage. Kontaktieren Sie uns telefonisch,
-                per E-Mail oder nutzen Sie unser Kontaktformular für eine kostenlose
-                Beratung.
+                Kostenlose Beratung. Verbindlicher Festpreis. Dreifach-Garantie auf jedes
+                Projekt. Starten Sie jetzt -- wir melden uns innerhalb von 24 Stunden.
               </p>
             </div>
           </div>

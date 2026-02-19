@@ -5,7 +5,7 @@ import { Phone, Mail, MessageCircle } from 'lucide-react';
 export default function StickyContactBar() {
   const whatsappNumber = '4989123456'; // Format: Ländercode + Nummer ohne +
   const whatsappMessage = encodeURIComponent(
-    'Hallo, ich interessiere mich für Ihre Fliesenleger-Leistungen.'
+    'Hallo, ich interessiere mich für ein kostenloses Festpreis-Angebot.'
   );
 
   return (

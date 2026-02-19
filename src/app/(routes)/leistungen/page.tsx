@@ -10,9 +10,9 @@ import Button from '@/components/ui/Button';
 import { services } from '@/data/services';
 
 export const metadata: Metadata = {
-  title: 'Leistungen',
+  title: 'Fliesenverlegung München | Bodenfliesen, Naturstein, Badsanierung | Festpreis',
   description:
-    'Alle Leistungen unseres Fliesenleger-Meisterbetriebs: Bodenfliesen, Wandfliesen, Naturstein, Mosaik, Badezimmer und Außenbereich.',
+    'Bodenfliesen ab 45 €/m², Wandfliesen ab 38 €/m², Naturstein ab 85 €/m². Meisterbetrieb seit 1998. Festpreis-Garantie auf jedes Projekt. Jetzt Angebot anfordern.',
 };
 
 const iconMap: Record<string, React.FC> = {
@@ -73,12 +73,11 @@ export default function LeistungenPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-                Unsere Leistungen
+                Von Bodenfliesen bis Badsanierung: Meisterhaft ausgeführt, dreifach garantiert
               </h1>
               <p className="text-lg text-primary-100">
-                Als Meisterbetrieb mit über 25 Jahren Erfahrung bieten wir Ihnen
-                professionelle Fliesenverlegung in allen Bereichen. Von klassischen
-                Bodenfliesen bis zu edlem Naturstein – wir setzen Ihre Wünsche um.
+                Transparente ab-Preise. Festpreis-Angebot nach kostenloser Beratung.
+                Das Dreifach-Garantie-System gilt für jede Leistung.
               </p>
             </div>
           </div>
@@ -152,15 +151,15 @@ export default function LeistungenPage() {
             <div className="mt-16 text-center">
               <div className="mx-auto max-w-2xl rounded-2xl bg-muted/50 p-8">
                 <h2 className="mb-4 text-2xl font-bold">
-                  Kostenlose Beratung vereinbaren
+                  Welche Leistung passt zu Ihrem Projekt?
                 </h2>
                 <p className="mb-6 text-muted-foreground">
-                  Sie sind sich nicht sicher, welche Leistung die richtige für Ihr
-                  Projekt ist? Kontaktieren Sie uns für eine unverbindliche Beratung.
+                  Kostenlose Beratung bei Ihnen vor Ort. Festpreis-Angebot in 48 Stunden.
+                  Dreifach-Garantie auf jedes Projekt.
                 </p>
                 <Link href="/kontakt">
                   <Button variant="primary" size="lg">
-                    Jetzt anfragen
+                    Angebot für Ihr Projekt anfordern -- kostenlos und mit Festpreis
                   </Button>
                 </Link>
               </div>

@@ -5,41 +5,41 @@ const steps = [
   {
     number: 1,
     icon: Phone,
-    title: 'Kontaktaufnahme',
+    title: 'Anfrage -- Antwort in 24 Stunden',
     description:
-      'Sie kontaktieren uns telefonisch, per E-Mail oder über unser Kontaktformular. Wir melden uns innerhalb von 24 Stunden zurück.',
+      'Sie kontaktieren uns per Telefon, Formular oder WhatsApp. Innerhalb von 24 Stunden melden wir uns bei Ihnen -- garantiert.',
     duration: '< 24h',
   },
   {
     number: 2,
     icon: Home,
-    title: 'Vor-Ort-Termin',
+    title: 'Kostenlose Vor-Ort-Beratung mit Materialproben',
     description:
-      'Kostenlose Beratung bei Ihnen vor Ort. Wir nehmen Maß, besprechen Ihre Wünsche und zeigen Ihnen Materialproben.',
+      'Wir kommen zu Ihnen, nehmen Maß, besprechen Ihre Wünsche und bringen Materialproben zum Anfassen mit. Kostenlos und unverbindlich.',
     duration: '1-2 Tage',
   },
   {
     number: 3,
     icon: Palette,
-    title: 'Angebot & Planung',
+    title: 'Festpreis-Angebot in 48 Stunden',
     description:
-      'Sie erhalten ein detailliertes Festpreis-Angebot. Gemeinsam planen wir Material, Design und Zeitrahmen.',
-    duration: '2-3 Tage',
+      'Sie erhalten ein verbindliches Festpreis-Angebot -- detailliert aufgeschlüsselt, ohne Kleingedrucktes. Der Angebotspreis ist Ihr Endpreis.',
+    duration: '48h',
   },
   {
     number: 4,
     icon: Hammer,
-    title: 'Umsetzung',
+    title: 'Umsetzung durch das Meister-Team',
     description:
-      'Professionelle Ausführung durch unser Meister-Team. Saubere Baustelle und tägliche Updates über den Fortschritt.',
+      'Unser festangestelltes Team führt die Arbeiten aus. Saubere Baustelle, tägliche Updates und ein fester Ansprechpartner für Sie.',
     duration: 'Je nach Projekt',
   },
   {
     number: 5,
     icon: CheckCircle,
-    title: 'Abnahme & Garantie',
+    title: 'Abnahme + Dreifach-Garantie startet',
     description:
-      'Gemeinsame Endabnahme und Übergabe. Sie erhalten 5 Jahre Garantie auf Material und Verlegearbeit.',
+      'Gemeinsame Endabnahme. Ab diesem Tag gilt das Dreifach-Garantie-System: Festpreis, 30-Tage-Zufriedenheit, 5-Jahre-Vollgarantie.',
     duration: '1 Tag',
   },
 ];
@@ -51,11 +51,11 @@ export default function Process() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            So läuft Ihr Projekt ab
+            In 5 Schritten zu Ihrem neuen Raum -- transparent und planbar
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Von der ersten Anfrage bis zur fertigen Fliesenverlegung – unser
-            bewährter 5-Schritte-Prozess sorgt für reibungslose Abwicklung.
+            Von der Anfrage bis zur Übergabe: klarer Zeitplan, garantierter
+            Festpreis und am Ende das Dreifach-Garantie-System.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function Process() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="mb-6 text-lg text-muted-foreground">
-            Bereit für Ihr Projekt? Lassen Sie uns noch heute starten.
+            Bereit für Schritt 1?
           </p>
           <a
             href="/kontakt"

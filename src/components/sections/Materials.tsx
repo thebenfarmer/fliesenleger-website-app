@@ -80,11 +80,11 @@ export default function Materials() {
             Materialien
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Hochwertige Materialien
+            Materialien, die wir empfehlen -- und warum
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Von klassischer Keramik bis zu edlem Naturstein – wir arbeiten nur mit
-            erstklassigen Materialien für langlebige Ergebnisse.
+            Von klassischem Feinsteinzeug bis zu edlem Marmor. Wir beraten Sie
+            ehrlich, welches Material zu Ihrem Raum und Budget passt.
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export default function Materials() {
             href="/materialien"
             className="inline-flex items-center text-primary hover:text-primary-600 font-medium transition-colors"
           >
-            Alle Materialien ansehen
+            Materialberatung bei Ihnen vor Ort -- kostenlos
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

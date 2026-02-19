@@ -8,23 +8,23 @@ import { Card } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
-  title: 'Über uns',
+  title: 'Fliesenleger-Meisterbetrieb München seit 1998 | Team & Dreifach-Garantie',
   description:
-    'Fliesenleger-Meisterbetrieb in München seit 1998. Erfahren Sie mehr über unser Team, unsere Philosophie und warum Kunden uns vertrauen.',
+    'Münchner Meisterbetrieb mit festangestelltem Team: 1 Meister, 5 Gesellen, 0 Subunternehmer. 25+ Jahre Erfahrung. Dreifach-Garantie-System auf jedes Projekt.',
 };
 
 const values = [
   {
     icon: Award,
-    title: 'Meisterqualität',
+    title: 'Meisterhafte Ausführung',
     description:
-      'Als Meisterbetrieb garantieren wir höchste handwerkliche Qualität nach neuesten Standards.',
+      'Jedes Projekt wird vom Meister persönlich geplant und von festangestellten Gesellen ausgeführt.',
   },
   {
     icon: Users,
-    title: 'Erfahrenes Team',
+    title: 'Festangestelltes Team',
     description:
-      'Unser Team besteht aus qualifizierten Fachkräften mit langjähriger Erfahrung.',
+      'Ein Meister und fünf Gesellen -- einige seit über 10 Jahren bei uns. Keine Subunternehmer.',
   },
   {
     icon: Target,
@@ -34,15 +34,15 @@ const values = [
   },
   {
     icon: Shield,
-    title: '5 Jahre Garantie',
+    title: 'Dreifach-Garantie',
     description:
-      'Wir stehen zu unserer Arbeit und bieten Ihnen 5 Jahre Garantie auf alle Leistungen.',
+      'Festpreis, 30-Tage-Zufriedenheit und 5-Jahre-Vollgarantie. Über die gesetzliche Gewährleistung hinaus.',
   },
   {
     icon: Heart,
-    title: 'Kundenzufriedenheit',
+    title: '500+ Projekte',
     description:
-      'Die Zufriedenheit unserer Kunden steht im Mittelpunkt – über 500 zufriedene Kunden.',
+      'Über 500 abgeschlossene Projekte in München und Umgebung. 4.9 von 5.0 bei Google-Bewertungen.',
   },
   {
     icon: TrendingUp,
@@ -79,9 +79,9 @@ const timeline = [
   },
   {
     year: '2024',
-    title: 'Heute',
+    title: 'Dreifach-Garantie-System',
     description:
-      'Führender Fliesenleger-Meisterbetrieb in München mit 25+ Jahren Erfahrung.',
+      'Einführung des Dreifach-Garantie-Systems: Festpreis, 30-Tage-Zufriedenheit, 5-Jahre-Vollgarantie.',
   },
 ];
 
@@ -95,13 +95,11 @@ export default function UeberUnsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-                Über uns
+                Münchner Meisterbetrieb seit 1998. Nicht nur Handwerker -- Ihr Partner.
               </h1>
               <p className="text-lg text-primary-100">
-                Seit 1998 steht unser Meisterbetrieb für höchste Qualität in der
-                Fliesenverlegung. Mit über 25 Jahren Erfahrung und einem Team von
-                qualifizierten Fachkräften setzen wir Ihre Projekte präzise und
-                zuverlässig um.
+                Ein Meister, fünf festangestellte Gesellen und eine Überzeugung:
+                Wer sein Handwerk liebt, gibt Garantien -- keine Ausreden.
               </p>
             </div>
           </div>
@@ -117,18 +115,17 @@ export default function UeberUnsPage() {
                 </h2>
                 <div className="prose prose-lg">
                   <p className="text-muted-foreground">
-                    Was 1998 als kleiner Handwerksbetrieb begann, ist heute einer
-                    der führenden Fliesenleger-Meisterbetriebe in München. Mit
-                    Leidenschaft für das Handwerk und dem Anspruch an höchste
-                    Qualität haben wir uns über die Jahre einen exzellenten Ruf
-                    erarbeitet.
+                    Was 1998 als kleiner Handwerksbetrieb begann, ist heute ein
+                    Meisterbetrieb mit über 500 abgeschlossenen Projekten in München.
+                    Die gleichen Hände, die Ihr Projekt planen, führen es auch aus --
+                    mit festangestellten Gesellen, nicht Subunternehmern.
                   </p>
                   <p className="text-muted-foreground mt-4">
-                    Unser Erfolgsrezept ist einfach: Ehrliche Beratung, präzise
-                    Ausführung und faire Preise. Jedes Projekt behandeln wir mit
-                    der gleichen Sorgfalt, ob kleines Gäste-WC oder großzügiges
-                    Badezimmer. Die Zufriedenheit unserer Kunden ist unser größter
-                    Antrieb.
+                    Unser Prinzip seit Tag eins: Wir geben Garantien, die andere
+                    sich nicht trauen. Festpreis ohne Nachforderungen, 30 Tage
+                    kostenlose Nachbesserung und 5 Jahre Vollgarantie auf Material
+                    und Arbeit. In einer Stadt, in der sich alles herumspricht,
+                    ist unser Ruf unser wichtigstes Kapital.
                   </p>
                 </div>
               </div>
@@ -239,16 +236,16 @@ export default function UeberUnsPage() {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="mb-4 text-3xl font-bold">
-                Lernen Sie uns kennen
+                Lernen Sie uns bei einer kostenlosen Beratung kennen
               </h2>
               <p className="mb-8 text-lg text-muted-foreground">
-                Vereinbaren Sie einen Termin für eine kostenlose Beratung. Wir
-                nehmen uns Zeit für Sie und Ihr Projekt.
+                Wir kommen zu Ihnen, nehmen Maß, bringen Materialproben mit und
+                erstellen ein verbindliches Festpreis-Angebot. Kostenlos und unverbindlich.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Link href="/kontakt">
                   <Button variant="primary" size="lg">
-                    Kontakt aufnehmen
+                    Lernen Sie uns bei einer kostenlosen Beratung kennen
                   </Button>
                 </Link>
                 <Link href="/referenzen">

@@ -140,10 +140,10 @@ export default function TileConfigurator() {
             Design Studio
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Virtueller Fliesenkonfigurator
+            Welcher Stil passt zu Ihnen? Probieren Sie es aus.
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Gestalten Sie Ihr Traumbad oder Wohnzimmer. Kombinieren Sie Fliesen, Farben und Materialien in Echtzeit.
+            Testen Sie verschiedene Fliesenarten, Farben und Formate. Kostenlos und unverbindlich.
           </p>
         </div>
 
@@ -268,16 +268,16 @@ export default function TileConfigurator() {
                 <CardContent>
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="mb-1 font-bold">Gefällt Ihnen das Design?</h4>
+                      <h4 className="mb-1 font-bold">Diese Fliesen bei Ihnen zu Hause sehen?</h4>
                       <p className="text-sm text-muted-foreground">
-                        Lassen Sie sich jetzt ein kostenloses Angebot erstellen
+                        Kostenlose Vor-Ort-Beratung mit Materialproben vereinbaren
                       </p>
                     </div>
                     <a
                       href="#contact"
                       className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-semibold text-white shadow-lg transition-all hover:bg-primary-800 hover:shadow-xl"
                     >
-                      Angebot anfragen
+                      Beratung anfragen
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </div>

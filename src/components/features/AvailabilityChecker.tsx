@@ -119,10 +119,11 @@ export default function AvailabilityChecker() {
             Terminbuchung
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Wann können wir starten?
+            Wann kann Ihr Projekt starten?
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Buchen Sie jetzt Ihren kostenlosen Vor-Ort-Termin. Unsere Experten beraten Sie persönlich und erstellen ein individuelles Angebot.
+            Als Meisterbetrieb betreuen wir nur 2-3 Projekte gleichzeitig -- für volle
+            Aufmerksamkeit auf Ihr Projekt. Prüfen Sie unsere aktuelle Verfügbarkeit.
           </p>
         </div>
 

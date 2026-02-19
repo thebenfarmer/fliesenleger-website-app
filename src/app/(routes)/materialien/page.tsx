@@ -9,9 +9,9 @@ import Button from '@/components/ui/Button';
 import { materials, categories } from '@/data/materials';
 
 export const metadata: Metadata = {
-  title: 'Materialien',
+  title: 'Fliesen-Materialberatung München | Feinsteinzeug, Naturstein, Mosaik',
   description:
-    'Hochwertige Materialien für Ihre Fliesenverlegung: Feinsteinzeug, Naturstein (Marmor, Granit, Schiefer), Mosaik und Großformatfliesen.',
+    'Ehrliche Materialberatung vom Meisterbetrieb: Feinsteinzeug, Naturstein, Mosaik, Großformat. Transparente Preise ab 38 €/m². Kostenlose Vor-Ort-Beratung mit Materialproben.',
 };
 
 export default function MaterialienPage() {
@@ -24,12 +24,11 @@ export default function MaterialienPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-                Hochwertige Materialien
+                Welches Material passt zu Ihrem Raum? Wir beraten ehrlich.
               </h1>
               <p className="text-lg text-primary-100">
-                Von klassischer Keramik bis zu edlem Naturstein – wir arbeiten nur
-                mit erstklassigen Materialien für langlebige und ästhetisch
-                ansprechende Ergebnisse.
+                Feinsteinzeug, Naturstein, Mosaik oder Großformat -- jedes Material hat
+                Stärken und Grenzen. Wir zeigen Ihnen beides.
               </p>
             </div>
           </div>
@@ -142,15 +141,15 @@ export default function MaterialienPage() {
             <div className="mt-16 text-center">
               <div className="mx-auto max-w-2xl rounded-2xl bg-muted/50 p-8">
                 <h2 className="mb-4 text-2xl font-bold">
-                  Beratung zu Materialien
+                  Material anfassen statt nur anschauen
                 </h2>
                 <p className="mb-6 text-muted-foreground">
-                  Sie sind sich nicht sicher, welches Material am besten zu Ihrem
-                  Projekt passt? Wir beraten Sie gerne und zeigen Ihnen Muster.
+                  Bei unserer kostenlosen Vor-Ort-Beratung bringen wir Materialproben mit.
+                  So sehen und fühlen Sie, was am besten passt.
                 </p>
                 <Link href="/kontakt">
                   <Button variant="primary" size="lg">
-                    Kostenlose Beratung anfragen
+                    Materialberatung bei Ihnen vor Ort vereinbaren
                   </Button>
                 </Link>
               </div>

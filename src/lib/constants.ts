@@ -12,7 +12,7 @@
 export const BUSINESS_INFO = {
   name: 'Fliesenleger Meisterbetrieb München',
   legalName: 'Fliesenleger Meisterbetrieb München GmbH',
-  tagline: 'Meisterhafte Fliesenverlegung seit 1998',
+  tagline: 'Dreifach-Garantie-System: Festpreis. Zufriedenheit. 5 Jahre Vollgarantie.',
 
   // Contact
   phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || '+49 89 12345678',
@@ -49,8 +49,10 @@ export const BUSINESS_INFO = {
   // Reviews & Ratings
   rating: {
     value: 4.9,
-    count: 127,
+    count: 182,
     maxRating: 5,
+    source: 'Google',
+    asOf: '2026-02',
   },
 } as const;
 
@@ -265,11 +267,11 @@ export const EXTERNAL_SERVICES = {
 // ============================================================================
 
 export const ERROR_MESSAGES = {
-  generic: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
-  network: 'Netzwerkfehler. Bitte überprüfen Sie Ihre Internetverbindung.',
-  validation: 'Bitte überprüfen Sie Ihre Eingaben.',
-  rateLimit: 'Zu viele Anfragen. Bitte versuchen Sie es später erneut.',
-  emailSend: 'E-Mail konnte nicht gesendet werden.',
+  generic: 'Da hat etwas nicht geklappt. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.',
+  network: 'Keine Internetverbindung. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.',
+  validation: 'Bitte prüfen Sie Ihre Eingaben -- wir benötigen mindestens Ihren Namen und eine Kontaktmöglichkeit.',
+  rateLimit: 'Sie haben bereits eine Anfrage gesendet. Wir melden uns zeitnah bei Ihnen.',
+  emailSend: 'Die Nachricht konnte leider nicht gesendet werden. Bitte rufen Sie uns an: 089 / 123 456.',
 } as const;
 
 // ============================================================================
@@ -277,7 +279,7 @@ export const ERROR_MESSAGES = {
 // ============================================================================
 
 export const SUCCESS_MESSAGES = {
-  contactForm: 'Vielen Dank für Ihre Nachricht! Wir melden uns schnellstmöglich bei Ihnen.',
-  quoteForm: 'Ihre Anfrage wurde erfolgreich gesendet. Wir erstellen Ihnen ein individuelles Angebot.',
+  contactForm: 'Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden bei Ihnen -- versprochen.',
+  quoteForm: 'Ihre Anfrage wurde gesendet. In 48 Stunden erhalten Sie Ihr verbindliches Festpreis-Angebot.',
   newsletter: 'Sie wurden erfolgreich für unseren Newsletter angemeldet.',
 } as const;

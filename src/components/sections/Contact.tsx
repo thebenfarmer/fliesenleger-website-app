@@ -64,11 +64,11 @@ export default function Contact() {
         {/* Section Header */}
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Kostenlose Beratung vereinbaren
+            In 48 Stunden wissen Sie, was Ihr Projekt kostet
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Kontaktieren Sie uns für ein unverbindliches Angebot. Wir beraten Sie
-            gerne und erstellen Ihnen einen kostenlosen Kostenvoranschlag.
+            Kostenloses Festpreis-Angebot. Unverbindlich. Und der erste Schritt
+            zu Räumen, auf die Sie stolz sein werden.
           </p>
         </div>
 
@@ -81,10 +81,10 @@ export default function Contact() {
             {submitSuccess ? (
               <Card variant="elevated" padding="lg" className="text-center">
                 <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-500" />
-                <h3 className="mb-2 text-2xl font-bold">Vielen Dank!</h3>
+                <h3 className="mb-2 text-2xl font-bold">Ihre Anfrage ist eingegangen!</h3>
                 <p className="text-muted-foreground">
-                  Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns
-                  schnellstmöglich bei Ihnen.
+                  Wir melden uns innerhalb von 24 Stunden bei Ihnen -- versprochen.
+                  In 48 Stunden erhalten Sie Ihr verbindliches Festpreis-Angebot.
                 </p>
                 <Button
                   variant="primary"
@@ -164,10 +164,11 @@ export default function Contact() {
                   fullWidth
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Wird gesendet...' : 'Anfrage senden'}
+                  {isSubmitting ? 'Wird gesendet...' : 'Kostenloses Festpreis-Angebot anfordern'}
                 </Button>
 
                 <p className="text-xs text-muted-foreground">
+                  Kostenlos und unverbindlich. Antwort innerhalb von 24 Stunden.
                   Mit dem Absenden stimmen Sie unserer{' '}
                   <a href="/datenschutz" className="text-primary hover:underline">
                     Datenschutzerklärung
@@ -245,11 +246,13 @@ export default function Contact() {
             </Card>
 
             <Card variant="outlined" padding="lg" className="bg-primary/5">
-              <h3 className="mb-3 text-lg font-semibold">Schnelle Antwort garantiert</h3>
-              <p className="text-sm text-muted-foreground">
-                Wir antworten in der Regel innerhalb von 24 Stunden auf Ihre Anfrage.
-                Bei dringenden Anliegen rufen Sie uns einfach direkt an!
-              </p>
+              <h3 className="mb-3 text-lg font-semibold">Was passiert nach Ihrer Anfrage?</h3>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p>1. Wir melden uns innerhalb von 24 Stunden.</p>
+                <p>2. Kostenlose Beratung bei Ihnen vor Ort.</p>
+                <p>3. Verbindliches Festpreis-Angebot in 48 Stunden.</p>
+                <p className="font-medium">Kein Kleingedrucktes. Keine Verpflichtung.</p>
+              </div>
             </Card>
           </div>
         </div>

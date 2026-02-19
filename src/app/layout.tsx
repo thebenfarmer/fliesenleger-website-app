@@ -34,16 +34,17 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://fliesenleger-muenchen.de'),
   title: {
-    default: "Fliesenleger München | Meisterbetrieb seit 1998",
+    default: "Fliesenleger München | Dreifach-Garantie-System | Meisterbetrieb seit 1998",
     template: "%s | Fliesenleger München",
   },
   description:
-    "Ihr Meisterbetrieb für hochwertige Fliesenverlegung in München. Badezimmer, Naturstein, Mosaik. Kostenlose Beratung ✓ 5 Jahre Garantie ✓",
+    "Fliesenleger-Meisterbetrieb in München mit Dreifach-Garantie: Festpreis, 30-Tage-Zufriedenheit, 5-Jahre-Vollgarantie. 500+ Projekte. 4.9/5.0 Sterne. Jetzt kostenlos beraten lassen.",
   keywords: [
     "Fliesenleger München",
-    "Badezimmer Fliesen",
-    "Naturstein verlegen",
+    "Badsanierung München",
+    "Naturstein verlegen München",
     "Fliesenleger Meisterbetrieb",
+    "Dreifach-Garantie",
   ],
   manifest: '/manifest.json',
   appleWebApp: {

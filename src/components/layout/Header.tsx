@@ -78,7 +78,7 @@ export default function Header() {
 
             <Link href="/kontakt" className="hidden md:inline-flex">
               <Button variant="primary" size="md">
-                Kostenlos anfragen
+                Festpreis-Angebot anfordern
               </Button>
             </Link>
 
@@ -126,7 +126,7 @@ export default function Header() {
 
               <Link href="/kontakt" className="w-full">
                 <Button variant="primary" size="md" fullWidth>
-                  Kostenlos anfragen
+                  Festpreis-Angebot anfordern
                 </Button>
               </Link>
             </div>

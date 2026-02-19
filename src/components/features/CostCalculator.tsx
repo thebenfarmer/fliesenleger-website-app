@@ -122,10 +122,11 @@ export default function CostCalculator() {
             Kostenrechner
           </Badge>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Was kostet Ihr Projekt?
+            Was kostet Ihr Projekt? Finden Sie es in 30 Sekunden heraus.
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Erhalten Sie in wenigen Sekunden eine erste Kostenschätzung für Ihr Fliesenprojekt.
+            Unser Kalkulator gibt Ihnen eine erste Schätzung. Für den verbindlichen
+            Festpreis vereinbaren Sie eine kostenlose Beratung.
           </p>
         </div>
 
@@ -366,20 +367,20 @@ export default function CostCalculator() {
                       <CardContent>
                         <div className="text-center">
                           <h3 className="mb-2 text-lg font-semibold text-foreground">
-                            Jetzt genaues Angebot anfordern
+                            Das ist eine erste Schätzung.
                           </h3>
                           <p className="mb-4 text-sm text-muted-foreground">
-                            Unsere Experten erstellen Ihnen ein kostenloses, detailliertes Angebot inklusive Vor-Ort-Beratung.
+                            Ihren verbindlichen Festpreis erhalten Sie nach einer kostenlosen Vor-Ort-Beratung -- garantiert ohne Nachforderungen.
                           </p>
                           <a
                             href="#contact"
                             className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-primary-800 hover:shadow-xl"
                           >
-                            Kostenloses Angebot erhalten
+                            Jetzt kostenloses Festpreis-Angebot anfordern
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </a>
                           <p className="mt-3 text-xs text-muted-foreground">
-                            ✓ Kostenlos & unverbindlich ✓ Antwort in 24h ✓ Meisterbetrieb
+                            Kostenlos & unverbindlich. Antwort in 24h. Festpreis-Garantie.
                           </p>
                         </div>
                       </CardContent>
